@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#SBATCH --job-name=jobname
+#SBATCH --output=MyOutput.log
+#SBATCH --error=MyError.log
+#
+#SBATCH --ntasks=8
+
+java -jar beast.jar -threads 8 nameofyourfile.xml 
