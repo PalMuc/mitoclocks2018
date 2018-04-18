@@ -1,0 +1,580 @@
+
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution conditionOnRhoSampling="true" id="FBD.t:BEAST_V22_tree" spec="beast.evolution.speciation.SABirthDeathModel">
+#            <parameter id="originFBD.t:BEAST_V22_tree" lower="0.0" name="origin">9.0</parameter>
+#            <parameter id="diversificationRateFBD.t:BEAST_V22_tree" lower="0.0" name="diversificationRate">1.0</parameter>
+#            <parameter id="turnoverFBD.t:BEAST_V22_tree" lower="0.0" name="turnover" upper="1.0">0.5</parameter>
+#            <parameter id="samplingProportionFBD.t:BEAST_V22_tree" lower="0.0" name="samplingProportion" upper="1.0">0.5</parameter>
+#            <parameter id="rFBD.t:BEAST_V22_tree" lower="0.0" name="removalProbability" upper="1.0">0.0</parameter>
+#            <parameter estimate="false" id="rhoFBD.t:BEAST_V22_tree" lower="0.0" name="rho" upper="1.0">1.0</parameter>
+#            <tree id="Tree.t:BEAST_V22_tree">
+#                <trait id="dateTrait.t:BEAST_V22_tree" spec="beast.evolution.tree.TraitSet" traitname="date-backward">
+#                Ircinia_strobilina_GQ337013_0=0.0,
+#Hippospongia_lachne_NC01021_0=0.0,
+#Hyattella_sinuosa_NC021422_0=0.0,
+#Agelas_schmidti_NC010213_0=0.0,
+#Tethya_actinia_AY320033_0=0.0,
+#Tethya_sp_KU748128_0=0.0,
+#Hymeniacidon_sinapium_KF192342_0=0.0,
+#Suberites_domuncula_AM690374_0=0.0,
+#Xestospongia_muta_EU237490_0=0.0,
+#Callyspongia_plicifera_EU237477_0=0.0,
+#Petrosia_ficiformis_KR911863_0=0.0,
+#Ectyoplasia_ferox_EU237480_0=0.0,
+#Ptilocaulis_walpersi_EU237488_0=0.0,
+#Topsentia_ophiraphidites_EU237482_0=0.0,
+#Axinella_corrugata_AY791693_0=0.0,
+#Craniella_spnov_HBOI20X951003_0=0.0,
+#Cinachyrella_alloclada_GW3895_0=0.0,
+#Cinachyrella_kuekenthali_EU237479_0=0.0,
+#Corallistes_sp_HBOI16X951007_0=0.0,
+#Neophrissospongia_HBOI15XII951006_0=0.0,
+#Corallistes_sp_HBOI7VI961002_0=0.0,
+#Poecillastra_laminaris_KM362735_0=0.0,
+#Geodia_neptuni_AY320032_0=0.0,
+#Vetulina_sp_HBOI31VIII934004_0=0.0,
+#Baikalospongia_intermedia_JQ302310_0=0.0,
+#Ephydatia_muelleri_EU237481_0=0.0,
+#Eunapius_subterraneus_GU086203_0=0.0,
+#Lubomirskia_baicalensis_GU385217_0=0.0,
+#Rezinkovia_echinata_JQ302309_0=0.0,
+#Polymastia_littoralis_KJ129611_0=0.0,
+#Negombata_magnifica_AM420314_0=0.0,
+#Iotrochota_birotulata_EU237486_0=0.0,
+#Crella_elegans_KR911862_0=0.0,
+#Ophiodesia_sp_1.620=1.62,
+#Crellastrina_sp_0.378=0.378,
+#Tethyastra_sp_0.378=0.378,
+#Ephydatia_chileana_0.058=0.058,
+#Patomophloioscanadensis_0.412=0.412,
+#Paleospongilla_chubutensis_1.000=1.0,
+#Eospongilla_morrisonensis_1.450=1.45,
+#Spongillina_indet_2.980=2.98,
+#Mastosia_wetzleri_1.555=1.555,
+#Pachytrachelus_conicus_0.863=0.863,
+#Ozotrachelus_conicus_0.412=0.412,
+#Paracinachyrella_sp_0.200=0.2,
+#Corallistes_multiosculata_0.412=0.412,
+#Porocorallistes_polymorphus_0.836=0.836,
+#Corallistes_campanensis_0.836=0.836,
+#Corallistes_sp_0.412=0.412,
+#Phrissospongia_hoffmanni_0.898=0.898,
+#Phrissospongia_glandiformis_0.836=0.836,
+#Neophrissospongia_kasperskii_0.836=0.836,
+#Leiocarenus_planus_1.555=1.555,
+#Geodia_hopetouni_0.378=0.378,
+#Geodia_sp_0.836=0.836,
+#Gelasinophorus_reitemeyeri_0.863=0.863,
+#Spinocladia_tubulata_1.126=1.126,
+#Pycnoclonella_dactyliformis_1.126=1.126,
+#Schrammeniella_bifurcata_0.836=0.836,
+#Schrammeniella_scytaliforme_0.836=0.836,
+#Pachinion_canaliculatum_0.836=0.836,
+#Pachinion_scriptum_0.849=0.849,
+#Dicranoclonella_schmidti_1.508=1.508,
+#root_crown_demo_5.150=5.15                
+#                                <taxa id="TaxonSet.BEAST_V22" spec="beast.evolution.alignment.TaxonSet">
+#                    </taxa>
+#                </trait>
+#                <taxonset idref="TaxonSet.BEAST_V22"/>
+#            </tree>
+#        </distribution>
+#        <prior id="diversificationRatePriorFBD.t:BEAST_V22_tree" name="distribution" x="@diversificationRateFBD.t:BEAST_V22_tree">
+#            <Exponential id="Exponential.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.0" name="mean">1.0</parameter>
+#            </Exponential>
+#        </prior>
+#        <prior id="originPriorFBD.t:BEAST_V22_tree" name="distribution" x="@originFBD.t:BEAST_V22_tree">
+#            <LogNormal id="LogNormalDistributionModel.0" meanInRealSpace="true" name="distr" offset="4.67">
+#                <parameter estimate="false" id="RealParameter.01" name="M">0.5</parameter>
+#                <parameter estimate="false" id="RealParameter.02" lower="0.0" name="S" upper="5.0">1.0</parameter>
+#            </LogNormal>
+#        </prior>
+#        <prior id="samplingProportionPriorFBD.t:BEAST_V22_tree" name="distribution" x="@samplingProportionFBD.t:BEAST_V22_tree">
+#            <Beta id="Beta.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.03" name="alpha">2.0</parameter>
+#                <parameter estimate="false" id="RealParameter.04" name="beta">2.0</parameter>
+#            </Beta>
+#        </prior>
+#        <prior id="turnoverPriorFBD.t:BEAST_V22_tree" name="distribution" x="@turnoverFBD.t:BEAST_V22_tree">
+#            <Uniform id="Uniform.0" name="distr"/>
+#        </prior>
+#        <prior id="MeanRatePrior.c:BEAST_V22" name="distribution">
+#            <parameter id="ucldMean.c:BEAST_V22" name="x">1.0</parameter>
+#            <Exponential id="Exponential.01" name="distr">
+#                <parameter estimate="false" id="RealParameter.05" name="mean">10.0</parameter>
+#            </Exponential>
+#        </prior>
+#        <prior id="ucldStdevPrior.c:BEAST_V22" name="distribution">
+#            <parameter id="ucldStdev.c:BEAST_V22" lower="0.0" name="x">0.1</parameter>
+#            <Exponential id="Exponential.02" name="distr">
+#                <parameter estimate="false" id="RealParameter.06" name="mean">0.3337</parameter>
+#            </Exponential>
+#        </prior>
+#        <distribution id="Agela_Axi.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Agela_Axi" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Agelas_schmidti_NC010213_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Axinella_corrugata_AY791693_0" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Astrophorina.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Astrophorina" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Corallistes_campanensis_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Corallistes_multiosculata_0.412" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Corallistes_sp_0.412" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Corallistes_sp_HBOI16X951007_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Corallistes_sp_HBOI7VI961002_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Dicranoclonella_schmidti_1.508" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Gelasinophorus_reitemeyeri_0.863" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Geodia_hopetouni_0.378" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Geodia_neptuni_AY320032_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Geodia_sp_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Leiocarenus_planus_1.555" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Neophrissospongia_HBOI15XII951006_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Neophrissospongia_kasperskii_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Pachinion_canaliculatum_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Pachinion_scriptum_0.849" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Phrissospongia_glandiformis_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Phrissospongia_hoffmanni_0.898" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Porocorallistes_polymorphus_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Pycnoclonella_dactyliformis_1.126" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Schrammeniella_bifurcata_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Schrammeniella_scytaliforme_0.836" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Spinocladia_tubulata_1.126" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Poecillastra_laminaris_KM362735_0" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Axinellida.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Axinellida" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Ptilocaulis_walpersi_EU237488_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Ectyoplasia_ferox_EU237480_0" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Corallistidae.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Corallistidae" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Corallistes_campanensis_0.836"/>
+#                <taxon idref="Corallistes_multiosculata_0.412"/>
+#                <taxon idref="Corallistes_sp_0.412"/>
+#                <taxon idref="Corallistes_sp_HBOI16X951007_0"/>
+#                <taxon idref="Corallistes_sp_HBOI7VI961002_0"/>
+#                <taxon idref="Dicranoclonella_schmidti_1.508"/>
+#                <taxon idref="Gelasinophorus_reitemeyeri_0.863"/>
+#                <taxon idref="Leiocarenus_planus_1.555"/>
+#                <taxon idref="Neophrissospongia_HBOI15XII951006_0"/>
+#                <taxon idref="Neophrissospongia_kasperskii_0.836"/>
+#                <taxon idref="Pachinion_canaliculatum_0.836"/>
+#                <taxon idref="Pachinion_scriptum_0.849"/>
+#                <taxon idref="Phrissospongia_glandiformis_0.836"/>
+#                <taxon idref="Phrissospongia_hoffmanni_0.898"/>
+#                <taxon idref="Porocorallistes_polymorphus_0.836"/>
+#                <taxon idref="Pycnoclonella_dactyliformis_1.126"/>
+#                <taxon idref="Schrammeniella_bifurcata_0.836"/>
+#                <taxon idref="Schrammeniella_scytaliforme_0.836"/>
+#                <taxon idref="Spinocladia_tubulata_1.126"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="FreshVetu.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="FreshVetu" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Rezinkovia_echinata_JQ302309_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Lubomirskia_baicalensis_GU385217_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Baikalospongia_intermedia_JQ302310_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Eunapius_subterraneus_GU086203_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Ephydatia_muelleri_EU237481_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Vetulina_sp_HBOI31VIII934004_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Ephydatia_chileana_0.058" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Patomophloioscanadensis_0.412" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Paleospongilla_chubutensis_1.000" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Eospongilla_morrisonensis_1.450" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Spongillina_indet_2.980" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Mastosia_wetzleri_1.555" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Pachytrachelus_conicus_0.863" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Ozotrachelus_conicus_0.412" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Freshis.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Freshis" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Baikalospongia_intermedia_JQ302310_0"/>
+#                <taxon idref="Eospongilla_morrisonensis_1.450"/>
+#                <taxon idref="Ephydatia_chileana_0.058"/>
+#                <taxon idref="Ephydatia_muelleri_EU237481_0"/>
+#                <taxon idref="Eunapius_subterraneus_GU086203_0"/>
+#                <taxon idref="Lubomirskia_baicalensis_GU385217_0"/>
+#                <taxon idref="Paleospongilla_chubutensis_1.000"/>
+#                <taxon idref="Patomophloioscanadensis_0.412"/>
+#                <taxon idref="Rezinkovia_echinata_JQ302309_0"/>
+#                <taxon idref="Spongillina_indet_2.980"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Haplosclerida.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Haplosclerida" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Petrosia_ficiformis_KR911863_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Callyspongia_plicifera_EU237477_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Xestospongia_muta_EU237490_0" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Poecilosclerida.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Poecilosclerida" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Negombata_magnifica_AM420314_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Crella_elegans_KR911862_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Iotrochota_birotulata_EU237486_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Ophiodesia_sp_1.620" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Crellastrina_sp_0.378" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Sphaerocladina.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Sphaerocladina" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Vetulina_sp_HBOI31VIII934004_0"/>
+#                <taxon idref="Pachytrachelus_conicus_0.863"/>
+#                <taxon idref="Mastosia_wetzleri_1.555"/>
+#                <taxon idref="Ozotrachelus_conicus_0.412"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Spirophorina.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Spirophorina" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Cinachyrella_alloclada_GW3895_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Cinachyrella_kuekenthali_EU237479_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Craniella_spnov_HBOI20X951003_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Paracinachyrella_sp_0.200" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Tethyida.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Tethyida" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="Tethya_actinia_AY320033_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Tethya_sp_KU748128_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Tethyastra_sp_0.378" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="Tetractinellidae.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="Tetractinellidae" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Cinachyrella_alloclada_GW3895_0"/>
+#                <taxon idref="Cinachyrella_kuekenthali_EU237479_0"/>
+#                <taxon idref="Corallistes_campanensis_0.836"/>
+#                <taxon idref="Corallistes_multiosculata_0.412"/>
+#                <taxon idref="Corallistes_sp_0.412"/>
+#                <taxon idref="Corallistes_sp_HBOI16X951007_0"/>
+#                <taxon idref="Corallistes_sp_HBOI7VI961002_0"/>
+#                <taxon idref="Craniella_spnov_HBOI20X951003_0"/>
+#                <taxon idref="Dicranoclonella_schmidti_1.508"/>
+#                <taxon idref="Gelasinophorus_reitemeyeri_0.863"/>
+#                <taxon idref="Geodia_hopetouni_0.378"/>
+#                <taxon idref="Geodia_neptuni_AY320032_0"/>
+#                <taxon idref="Geodia_sp_0.836"/>
+#                <taxon idref="Leiocarenus_planus_1.555"/>
+#                <taxon idref="Neophrissospongia_HBOI15XII951006_0"/>
+#                <taxon idref="Neophrissospongia_kasperskii_0.836"/>
+#                <taxon idref="Pachinion_canaliculatum_0.836"/>
+#                <taxon idref="Pachinion_scriptum_0.849"/>
+#                <taxon idref="Paracinachyrella_sp_0.200"/>
+#                <taxon idref="Phrissospongia_glandiformis_0.836"/>
+#                <taxon idref="Phrissospongia_hoffmanni_0.898"/>
+#                <taxon idref="Poecillastra_laminaris_KM362735_0"/>
+#                <taxon idref="Porocorallistes_polymorphus_0.836"/>
+#                <taxon idref="Pycnoclonella_dactyliformis_1.126"/>
+#                <taxon idref="Schrammeniella_bifurcata_0.836"/>
+#                <taxon idref="Schrammeniella_scytaliforme_0.836"/>
+#                <taxon idref="Spinocladia_tubulata_1.126"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="ingroup.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="ingroup" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Agelas_schmidti_NC010213_0"/>
+#                <taxon idref="Axinella_corrugata_AY791693_0"/>
+#                <taxon idref="Baikalospongia_intermedia_JQ302310_0"/>
+#                <taxon idref="Callyspongia_plicifera_EU237477_0"/>
+#                <taxon idref="Cinachyrella_alloclada_GW3895_0"/>
+#                <taxon idref="Cinachyrella_kuekenthali_EU237479_0"/>
+#                <taxon idref="Corallistes_campanensis_0.836"/>
+#                <taxon idref="Corallistes_multiosculata_0.412"/>
+#                <taxon idref="Corallistes_sp_0.412"/>
+#                <taxon idref="Corallistes_sp_HBOI16X951007_0"/>
+#                <taxon idref="Corallistes_sp_HBOI7VI961002_0"/>
+#                <taxon idref="Craniella_spnov_HBOI20X951003_0"/>
+#                <taxon idref="Crella_elegans_KR911862_0"/>
+#                <taxon idref="Crellastrina_sp_0.378"/>
+#                <taxon idref="Dicranoclonella_schmidti_1.508"/>
+#                <taxon idref="Ectyoplasia_ferox_EU237480_0"/>
+#                <taxon idref="Eospongilla_morrisonensis_1.450"/>
+#                <taxon idref="Ephydatia_chileana_0.058"/>
+#                <taxon idref="Ephydatia_muelleri_EU237481_0"/>
+#                <taxon idref="Eunapius_subterraneus_GU086203_0"/>
+#                <taxon idref="Gelasinophorus_reitemeyeri_0.863"/>
+#                <taxon idref="Geodia_hopetouni_0.378"/>
+#                <taxon idref="Geodia_neptuni_AY320032_0"/>
+#                <taxon idref="Geodia_sp_0.836"/>
+#                <taxon id="Hippospongia_lachne_NC01021_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Iotrochota_birotulata_EU237486_0"/>
+#                <taxon idref="Leiocarenus_planus_1.555"/>
+#                <taxon idref="Lubomirskia_baicalensis_GU385217_0"/>
+#                <taxon idref="Mastosia_wetzleri_1.555"/>
+#                <taxon idref="Negombata_magnifica_AM420314_0"/>
+#                <taxon idref="Neophrissospongia_HBOI15XII951006_0"/>
+#                <taxon idref="Neophrissospongia_kasperskii_0.836"/>
+#                <taxon idref="Ophiodesia_sp_1.620"/>
+#                <taxon idref="Ozotrachelus_conicus_0.412"/>
+#                <taxon idref="Pachinion_canaliculatum_0.836"/>
+#                <taxon idref="Pachinion_scriptum_0.849"/>
+#                <taxon idref="Pachytrachelus_conicus_0.863"/>
+#                <taxon idref="Paleospongilla_chubutensis_1.000"/>
+#                <taxon idref="Paracinachyrella_sp_0.200"/>
+#                <taxon idref="Patomophloioscanadensis_0.412"/>
+#                <taxon idref="Petrosia_ficiformis_KR911863_0"/>
+#                <taxon idref="Phrissospongia_glandiformis_0.836"/>
+#                <taxon idref="Phrissospongia_hoffmanni_0.898"/>
+#                <taxon idref="Poecillastra_laminaris_KM362735_0"/>
+#                <taxon id="Polymastia_littoralis_KJ129611_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Porocorallistes_polymorphus_0.836"/>
+#                <taxon idref="Ptilocaulis_walpersi_EU237488_0"/>
+#                <taxon idref="Pycnoclonella_dactyliformis_1.126"/>
+#                <taxon idref="Rezinkovia_echinata_JQ302309_0"/>
+#                <taxon idref="Schrammeniella_bifurcata_0.836"/>
+#                <taxon idref="Schrammeniella_scytaliforme_0.836"/>
+#                <taxon idref="Spinocladia_tubulata_1.126"/>
+#                <taxon idref="Spongillina_indet_2.980"/>
+#                <taxon id="Suberites_domuncula_AM690374_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Tethya_actinia_AY320033_0"/>
+#                <taxon idref="Tethya_sp_KU748128_0"/>
+#                <taxon idref="Tethyastra_sp_0.378"/>
+#                <taxon id="Topsentia_ophiraphidites_EU237482_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Vetulina_sp_HBOI31VIII934004_0"/>
+#                <taxon idref="Xestospongia_muta_EU237490_0"/>
+#                <taxon id="root_crown_demo_5.150" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#        </distribution>
+#        <distribution id="root.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:BEAST_V22_tree">
+#            <taxonset id="root" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon idref="Agelas_schmidti_NC010213_0"/>
+#                <taxon idref="Axinella_corrugata_AY791693_0"/>
+#                <taxon idref="Baikalospongia_intermedia_JQ302310_0"/>
+#                <taxon idref="Callyspongia_plicifera_EU237477_0"/>
+#                <taxon idref="Cinachyrella_alloclada_GW3895_0"/>
+#                <taxon idref="Cinachyrella_kuekenthali_EU237479_0"/>
+#                <taxon idref="Corallistes_campanensis_0.836"/>
+#                <taxon idref="Corallistes_multiosculata_0.412"/>
+#                <taxon idref="Corallistes_sp_0.412"/>
+#                <taxon idref="Corallistes_sp_HBOI16X951007_0"/>
+#                <taxon idref="Corallistes_sp_HBOI7VI961002_0"/>
+#                <taxon idref="Craniella_spnov_HBOI20X951003_0"/>
+#                <taxon idref="Crella_elegans_KR911862_0"/>
+#                <taxon idref="Crellastrina_sp_0.378"/>
+#                <taxon idref="Dicranoclonella_schmidti_1.508"/>
+#                <taxon idref="Ectyoplasia_ferox_EU237480_0"/>
+#                <taxon idref="Eospongilla_morrisonensis_1.450"/>
+#                <taxon idref="Ephydatia_chileana_0.058"/>
+#                <taxon idref="Ephydatia_muelleri_EU237481_0"/>
+#                <taxon idref="Eunapius_subterraneus_GU086203_0"/>
+#                <taxon idref="Gelasinophorus_reitemeyeri_0.863"/>
+#                <taxon idref="Geodia_hopetouni_0.378"/>
+#                <taxon idref="Geodia_neptuni_AY320032_0"/>
+#                <taxon idref="Geodia_sp_0.836"/>
+#                <taxon idref="Hippospongia_lachne_NC01021_0"/>
+#                <taxon id="Hyattella_sinuosa_NC021422_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="Hymeniacidon_sinapium_KF192342_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Iotrochota_birotulata_EU237486_0"/>
+#                <taxon id="Ircinia_strobilina_GQ337013_0" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon idref="Leiocarenus_planus_1.555"/>
+#                <taxon idref="Lubomirskia_baicalensis_GU385217_0"/>
+#                <taxon idref="Mastosia_wetzleri_1.555"/>
+#                <taxon idref="Negombata_magnifica_AM420314_0"/>
+#                <taxon idref="Neophrissospongia_HBOI15XII951006_0"/>
+#                <taxon idref="Neophrissospongia_kasperskii_0.836"/>
+#                <taxon idref="Ophiodesia_sp_1.620"/>
+#                <taxon idref="Ozotrachelus_conicus_0.412"/>
+#                <taxon idref="Pachinion_canaliculatum_0.836"/>
+#                <taxon idref="Pachinion_scriptum_0.849"/>
+#                <taxon idref="Pachytrachelus_conicus_0.863"/>
+#                <taxon idref="Paleospongilla_chubutensis_1.000"/>
+#                <taxon idref="Paracinachyrella_sp_0.200"/>
+#                <taxon idref="Patomophloioscanadensis_0.412"/>
+#                <taxon idref="Petrosia_ficiformis_KR911863_0"/>
+#                <taxon idref="Phrissospongia_glandiformis_0.836"/>
+#                <taxon idref="Phrissospongia_hoffmanni_0.898"/>
+#                <taxon idref="Poecillastra_laminaris_KM362735_0"/>
+#                <taxon idref="Polymastia_littoralis_KJ129611_0"/>
+#                <taxon idref="Porocorallistes_polymorphus_0.836"/>
+#                <taxon idref="Ptilocaulis_walpersi_EU237488_0"/>
+#                <taxon idref="Pycnoclonella_dactyliformis_1.126"/>
+#                <taxon idref="Rezinkovia_echinata_JQ302309_0"/>
+#                <taxon idref="Schrammeniella_bifurcata_0.836"/>
+#                <taxon idref="Schrammeniella_scytaliforme_0.836"/>
+#                <taxon idref="Spinocladia_tubulata_1.126"/>
+#                <taxon idref="Spongillina_indet_2.980"/>
+#                <taxon idref="Suberites_domuncula_AM690374_0"/>
+#                <taxon idref="Tethya_actinia_AY320033_0"/>
+#                <taxon idref="Tethya_sp_KU748128_0"/>
+#                <taxon idref="Tethyastra_sp_0.378"/>
+#                <taxon idref="Topsentia_ophiraphidites_EU237482_0"/>
+#                <taxon idref="Vetulina_sp_HBOI31VIII934004_0"/>
+#                <taxon idref="Xestospongia_muta_EU237490_0"/>
+#                <taxon idref="root_crown_demo_5.150"/>
+#            </taxonset>
+#        </distribution>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
+#        <distribution data="@BEAST_V22" id="treeLikelihood.BEAST_V22" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:BEAST_V22_tree">
+#            <siteModel id="SiteModel.s:BEAST_V22" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:BEAST_V22" name="mutationRate">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:BEAST_V22" name="shape">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:BEAST_V22" lower="0.0" name="proportionInvariant" upper="1.0">0.0</parameter>
+#                <substModel id="JTT.s:BEAST_V22" spec="beast.evolution.substitutionmodel.JTT"/>
+#            </siteModel>
+#            <branchRateModel clock.rate="@ucldMean.c:BEAST_V22" id="RelaxedClock.c:BEAST_V22" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" tree="@Tree.t:BEAST_V22_tree">
+#                <LogNormal S="@ucldStdev.c:BEAST_V22" id="LogNormalDistributionModel.c:BEAST_V22" meanInRealSpace="true" name="distr">
+#                    <parameter estimate="false" id="RealParameter.07" lower="0.0" name="M" upper="1.0">1.0</parameter>
+#                </LogNormal>
+#                <rateCategories dimension="126" id="rateCategories.c:BEAST_V22" spec="beast.core.parameter.IntegerParameter">1</rateCategories>
+#            </branchRateModel>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	posterior	likelihood	prior	treeLikelihood	TreeHeight	ucldMean	ucldStdev	rate.mean	rate.variance	rate.coefficientOfVariation	FBD	diversificationRateFBD	turnoverFBD	samplingProportionFBD	originFBD	SACountFBD	mrcatime(Tetractinellidae)	mrcatime(Astrophorina)	mrcatime(Spirophorina)	mrcatime(Corallistidae)	mrcatime(FreshVetu)	mrcatime(Sphaerocladina)	mrcatime(Freshis)	mrcatime(Poecilosclerida)	mrcatime(Tethyida)	mrcatime(Haplosclerida)	mrcatime(Axinellida)	mrcatime(Agela_Axi)	mrcatime(root)	mrcatime(ingroup)
+0	-215868.63590402438	-215629.85581880304	-238.78008522133695	-215629.85581880304	8.83793397568612	1.0	0.1	1.011082963574281	0.011341528701308102	0.10469117290423964	-230.66191970383886	1.0	0.5	0.5	9.0	0	6.066996769439508	5.704783213847172	1.344317746000791	3.787074293008021	4.878709562090459	4.850797436457302	4.1705278414358835	2.410642644656439	0.5284611306393328	1.6252142263236653	0.5237820547397654	2.740732660576167	8.83793397568612	7.955968156455567
+5000	-74025.19440452418	-73863.08274473663	-162.11165978755608	-73863.08274473663	6.4637298556562754	0.23494873459841636	1.6552596513506153	0.06101599289877941	0.22608297428747348	3.001872298876077	-152.22476291845646	0.2531753802786897	0.7705444950628616	0.15197408149692895	6.532241897203351	8	5.306984518218318	4.96063805888066	0.7076889831564487	4.846590356833096	5.040776252258146	5.024125037304416	4.17972534425917	2.4338148904353876	0.5661505269998794	1.6966409062942385	0.020773582841380162	2.6323949544088996	6.4637298556562754	6.124758297153175
+10000	-73344.97266304816	-73198.79916062568	-146.1735024224799	-73198.79916062568	5.771313786715291	0.2903789714662044	1.6846478261176885	0.07966963285802385	0.4365517821309698	2.9847107445738383	-137.88733754804966	0.1864934565806219	0.8197893033025219	0.259893949499473	5.826647637109651	15	4.987049169334941	4.409071391107022	0.4691002396953453	4.193978623606594	4.480299126644618	4.44923333591815	3.50093643410021	2.1711148068520525	0.46557127060101966	1.5079936879353322	0.018463796130570403	2.2552955484746895	5.771313786715291	5.406638243842764
+15000	-73209.98452959649	-73070.03492885524	-139.94960074124998	-73070.03492885524	6.709108351698317	0.29757472642389454	1.6900492934738496	0.1090213487471155	0.7653920857103099	3.2121458576655555	-129.72554685919252	0.21726596522861905	0.7740080293144274	0.2533985964321552	6.992744442185167	17	5.120482739686359	4.589102163324616	0.481651493494915	2.3044951589373732	4.567509510053024	4.28739769151971	3.1689006915003053	2.3238915844525323	0.4864804454381805	1.550008675538968	0.018957813766308142	2.4495634603507135	6.709108351698317	5.551298346436193
+20000	-73128.369833498	-72986.49366249546	-141.87617100254158	-72986.49366249546	6.279424037499184	0.3066208876784305	1.6841016214707207	0.09458478091526518	0.7639200224352509	3.2999443238843447	-132.91278942441528	0.11475051588241598	0.8423174427449936	0.33544215093074325	6.321570409429185	19	4.983515689833909	4.57957179996891	0.4526537390845797	2.1576293155381925	4.446038207839081	4.167217678762433	3.2645135607129965	2.2990098063424886	0.478612512097329	1.4867348377883165	0.03503496401800879	2.3968262766173862	6.279424037499184	5.311433332137985
+25000	-73102.58766007547	-72964.5471144681	-138.0405456073581	-72964.5471144681	5.8832843241246815	0.3066208876784305	1.6841016214707207	0.05981388762603643	0.4709371582433156	3.424913766668359	-128.00907343097248	0.20483492173447368	0.7790813709164061	0.2649622457428781	6.891566276220859	19	4.9188567942071755	4.503870498183662	0.3939389479944567	2.0909506271901184	4.354947786612902	3.942513350215855	3.8241247541495316	2.192233251569369	0.46821738142102715	1.467445115695681	0.028680327858055805	2.3219677150966227	5.8832843241246815	5.220540914546213
+30000	-73085.1737913401	-72944.61850243158	-140.55528890852915	-72944.61850243158	5.822486015012352	0.31081805464667417	1.6904196872445867	0.06953508681740304	0.4949820598536601	3.163775706312321	-130.60849052701033	0.2910823921240256	0.5624285217140375	0.43315160655524715	6.922451496193276	18	4.965256578762891	4.382309109976234	0.4680405384266122	1.9753126006893547	4.350977174167183	3.953300290116771	3.256798671796693	2.1850546072080714	0.44976765795578827	1.4832032205902468	0.028988310493974358	2.346902079199868	5.822486015012352	5.276601499339388
+35000	-73035.37419274393	-72900.4705239791	-134.90366876482662	-72900.4705239791	5.9870357720063865	0.3075559359860293	1.6928458436562728	0.061803933523024726	1.0627758342099036	3.319384501149738	-126.25956343035297	0.20462269622160062	0.7629192047996434	0.3077791791508051	6.043015303775026	19	4.947117331242852	4.4103302451738315	0.4148409797782851	1.952309717981051	4.366272298580344	4.142266322067207	3.604253981175222	2.177072089943106	0.4515410109755459	1.4777847311498664	0.028882409392813328	2.300595671562115	5.9870357720063865	5.2361114737178145
+40000	-72855.67334504405	-72712.83562163055	-142.83772341349868	-72712.83562163055	5.843995088105593	0.30296294624229686	1.7012184227383877	0.06718348932164259	0.3992832851714079	3.2760513828663496	-134.193619965167	0.34895620368451197	0.5018701611325894	0.4217324154456967	6.0245769730125	17	4.933993305523118	4.178830615781875	0.41032754822772943	1.9652821496561534	4.3898776653086795	4.007786068558156	4.354459671938125	2.296802050421127	0.4515727490317885	1.4738643703576622	0.03328196546015717	2.334019703812827	5.843995088105593	5.2222207860604835
+45000	-72843.79737261972	-72706.7194366641	-137.0779359556205	-72706.7194366641	5.933959945001341	0.30397648608198796	1.7197499902577136	0.22769765426273017	0.7768054075889307	3.0676711978950033	-128.20623714167513	0.43234988138161	0.4833719754427324	0.4059517271871472	6.066937752303548	20	4.839325634547534	4.248457789969688	0.4050485362772915	2.250431072760339	4.308188478430522	4.019319450947724	3.840915877230987	2.0797262318987886	0.4553296715839221	1.4547129140843031	0.03285378096667849	2.3039916982299613	5.933959945001341	5.164102659514009
+50000	-72773.72905892179	-72634.21076640552	-139.51829251627117	-72634.21076640552	5.663202879587796	0.3143492362280395	1.699615149879056	0.06746307451548433	0.476963061769255	2.7859215089666467	-130.23137952669583	0.2833485011284697	0.679624340863585	0.270303769509232	6.312561239898587	17	4.8780153669631945	4.172410997055101	0.4038046104520199	2.2778497166410148	4.191068515400255	4.153182122233192	3.1427338109667233	2.093844178048917	0.4584387913037832	1.4502454125379034	0.032752885239519795	2.296916015890803	5.663202879587796	5.16065969437529
+55000	-72736.56082787766	-72596.9465522363	-139.61427564136022	-72596.9465522363	5.706826146944971	0.3008165038419256	1.6854225016101096	0.15106234617821315	0.5209822751252348	2.739605621591286	-131.39335796531824	0.24560506476614463	0.6748228993580808	0.30665510986692	5.8130729147149545	17	4.880404176259832	4.346377280503459	0.4040023573090728	2.256881955115656	4.179602471784467	3.9990019198155586	4.02778070316737	2.0948695529323396	0.43398090509422843	1.4509556111459967	0.03276892463072011	2.298040836933704	5.706826146944971	5.1826394311980915
+60000	-72731.72781198601	-72587.14583543438	-144.58197655164082	-72587.14583543438	5.651707785516714	0.29667162488815013	1.6630945465265554	0.08283589451389009	0.4472872323693649	2.8011742024659054	-136.08320512377577	0.39018151640962956	0.6368735848353966	0.19824311547275808	5.769177099212891	16	4.888293628357558	4.230773392867978	0.41069608939728597	2.300969958173493	4.134594055358033	3.963117850314357	3.4915862875338473	2.091408000524033	0.435606259564655	1.453301163763493	0.03282189746899972	2.3017557512003965	5.651707785516714	5.183559398697752
+65000	-72732.85115410545	-72589.50961573713	-143.34153836831138	-72589.50961573713	5.813345087636718	0.2940056511623524	1.6833269452547035	0.06999846187823233	0.7283143720706371	3.1485307923169197	-134.7843198132916	0.14742996530234528	0.8597909818047699	0.17436462367764055	5.838526236774479	12	4.957941680365452	4.2278325292525	0.4165476574020894	2.315194804205036	4.215484165201572	4.0654928477851975	3.581763556925325	2.0780421903719297	0.4121488277068016	1.4740076930214219	0.033289541476441795	2.305576151797701	5.813345087636718	5.239968786689107
+70000	-72725.91609499858	-72589.35741741551	-136.55867758307863	-72589.35741741551	5.723181414691568	0.3001222736434053	1.6723036829003979	0.05981128145569626	0.49691015397820076	2.945937085514869	-128.1025533593495	0.18749945975287555	0.7598914522985157	0.31110706566242424	5.987569525892731	19	4.952401711994156	4.2944981010514764	0.4160822100459246	2.0582963635302396	4.196264596958767	4.060950095320066	3.1190245912867574	2.189835557985312	0.42545270855367934	1.472360647427738	0.033252343982246815	2.310244824391812	5.723181414691568	5.249488564397238
+75000	-72724.35958134124	-72590.64152253579	-133.71805880544153	-72590.64152253579	5.622106382155436	0.3087700928315661	1.67395075258324	0.09682323375260986	0.5474364042551526	2.731444288872771	-124.42444354944111	0.4794071886916232	0.47884728645018815	0.3999760503068683	6.36456310690533	21	4.905602911039876	4.327777187798931	0.5369492519423116	1.9316479335686683	4.105687537574135	3.9969568833482647	2.98	2.171503738344743	0.4210235044204233	1.449158912661688	0.03641161416074287	2.2738395538802547	5.622106382155436	5.222629602484613
+80000	-72731.4158924764	-72596.04616700437	-135.3697254720281	-72596.04616700437	5.550538889321358	0.3106459528647861	1.6994562293988618	0.05486721234027754	0.4375703383349721	3.590466068859027	-126.98419958845874	0.22132147035790997	0.7395979256285323	0.33158717159296464	5.907273126667616	16	4.872952124783924	3.861740906795447	0.5028115785652318	1.9772835384884302	4.0692989583478525	3.9789377514241986	2.98	2.148462588326347	0.41600731764981086	1.442625795996113	0.03624746285806958	2.2635886014453606	5.550538889321358	5.165694702616574
+85000	-72719.13202746028	-72584.78185813483	-134.3501693254445	-72584.78185813483	5.354728776902371	0.32200339283544693	1.6981861440478923	0.06040718416417322	0.4801594747260768	2.895433613489471	-126.62346405082452	0.3387942022504478	0.6759135854239547	0.3040867848228757	5.525428706918735	14	4.750613708527484	3.6073337890193025	0.49018818916556717	1.9168208510216302	3.9610634156845506	3.9149071455283937	3.16185832707922	2.0779282664688585	0.4055632018265666	1.4064078011105845	0.03533744833590414	2.1201159773817606	5.354728776902371	5.15
+90000	-72459.50537659632	-72314.73750715832	-144.76786943799894	-72314.73750715832	5.535858068641734	0.3204645634259574	1.7055326203205494	0.09792949983397504	0.8511077728720366	3.003722293873324	-134.58711818608003	0.30538980558310874	0.6750367384244724	0.23797988750952992	6.826679518977838	17	4.890832348133228	3.6591497800686845	0.49766130546376325	2.3895432219514405	4.0668476710471255	4.030459153712814	3.3242113160103517	2.341777992330313	0.41753376477345316	1.447919193259485	0.03638046493056103	2.138061511514452	5.535858068641734	5.3179018272912355
+95000	-72360.54311608036	-72223.13645782147	-137.40665825888593	-72223.13645782147	5.5531708722482165	0.3122348502381899	1.7180389770324487	0.057523314444260495	0.4650023570857759	3.204223293866306	-129.0600063887268	0.18169288130181038	0.7853312019820399	0.3175242442484861	5.867739389038217	16	4.9003026603820725	3.7761822566372905	0.49862494674635777	1.9773513202799904	4.077487774583049	3.962341605208491	3.115341682452874	2.3114089972263896	0.3963743099042137	1.4507228565002617	0.03645090986470032	2.129930715788863	5.5531708722482165	5.367842145952124
+100000	-72325.6320025652	-72184.37337021381	-141.25863235137808	-72184.37337021381	5.451034054836293	0.31658700119004174	1.7130083018857032	0.11752269311381257	0.921363341838055	3.0541556897482045	-132.13943938253584	0.43145647916721486	0.5126437742358314	0.47500640307107683	6.239312653750881	17	4.827675393651207	3.6240095593175488	0.4912348385192084	2.22839697241266	3.988039474669654	3.0587473296759904	2.9843069125376447	2.2771516606086153	0.3828483424797387	1.4292217282733386	0.03591067181476731	2.1499090856389667	5.451034054836293	5.3245685395046705
+105000	-72291.0913021722	-72157.16410593964	-133.92719623255402	-72157.16410593964	5.580224518630484	0.3073471492587855	1.7232503366363738	0.0643216044789836	0.47073740378072054	2.6250887041782	-125.25476218413714	0.4767146163841746	0.3764859236536174	0.517563110041377	5.948669745373862	21	4.937318232489794	3.485449908751189	0.5388490532020573	1.8819424119398658	4.07628263366871	2.869836929358145	2.98	2.3275380866528805	0.3913196094700845	1.4608460491994446	0.036705265535025296	2.197480021303607	5.580224518630484	5.442385013292662
+110000	-72195.84696868651	-72054.46536926129	-141.38159942522591	-72054.46536926129	5.621318970234787	0.2977448663911573	1.7134866077480926	0.08890205890324851	0.49394476666036646	2.942064022503733	-132.75654447188322	0.3097383370156041	0.6961779003090564	0.22828232771406246	5.846838426854472	16	4.996780299016406	3.6142455393775164	2.2902728408223556	2.393851021236635	4.0620405503024	1.67086890743999	2.98	2.3825001001058506	0.3820356533898211	1.4784395930773788	0.03714732149300636	2.264711465922913	5.621318970234787	5.515748021946825
+115000	-72178.0596814324	-72035.02839212443	-143.03128930796626	-72035.02839212443	5.595903020390613	0.2940078824444086	1.7114060441367234	0.09391240271552906	0.8026021999069763	2.833090112299497	-133.326804152716	0.17767086518075226	0.8312161885471012	0.15584356199499197	6.3649719408445735	15	5.057116465615592	3.6349846720185486	2.5402410447291195	2.404880840117219	4.094093240853909	2.4871983749983126	3.9794610148125575	2.3876799890985314	0.382866252421367	1.4816539278739171	0.033744993300361424	2.233517262841442	5.595903020390613	5.581456563913078
+120000	-72144.16330581781	-72001.71972885051	-142.44357696729801	-72001.71972885051	5.666321391281677	0.2905932290961461	1.7050511527201189	0.06722867662932355	0.49343927317037534	2.5761697129539978	-133.29379158451815	0.1521731239238901	0.7772171607309082	0.26897376070505696	6.298564812839927	20	5.0559308252881765	3.686746097784947	2.111379147791994	2.5313438336497485	4.095938042095753	2.902461903892905	4.06243402490988	2.3691394595613833	0.396573733331027	1.4776677078589913	0.03365420626489597	2.180663417154751	5.666321391281677	5.566440294965959
+125000	-72129.42049015814	-71986.75589044014	-142.66459971800313	-71986.75589044014	5.691988862618243	0.303269107092833	1.7120747746576548	0.08600536990952758	0.7696805286175813	2.9809349778288348	-134.08780590534363	0.4029567291834445	0.6120877871403017	0.2560737964865193	5.817285631320502	19	4.926194797294114	3.6287565400293706	2.0945055019036554	2.402082890658077	3.9834194141923134	2.705271931709506	3.961475254338775	2.2800218880969227	0.3867181648928953	1.4416058804081748	0.03281783888804345	2.2006386720658644	5.691988862618243	5.473739504050478
+130000	-72133.26381208438	-71987.30832331345	-145.9554887709287	-71987.30832331345	5.561493505180649	0.3064805098006741	1.713706340386586	0.07827734227934552	0.557482574017533	2.681637670352563	-136.57842615258997	0.3394240175939348	0.6611123149885337	0.22005180281419703	6.224632875921041	15	4.96222024081491	3.4887447555029287	1.6825007600049673	2.2866884606231506	4.012550306702787	3.4179979509748883	3.9904456684021	2.265399333259406	0.38378143988553776	1.452969130493667	0.033057836949424456	2.216732023517117	5.561493505180649	5.513769162126328
+135000	-72134.77906312708	-71990.57834223675	-144.20072089032965	-71990.57834223675	5.839045541141673	0.3089932243480381	1.7123616188140378	0.06570213620022201	0.5078921098368455	2.9193046100072135	-135.74558222931293	0.19298460428332892	0.776823382405825	0.25063402997058887	5.853394135388964	14	4.99512146237333	3.511876329393475	2.287199388720969	2.366661666592182	4.039483424480608	2.3663530124737377	4.016903691359858	2.297404577293362	0.38632604241644225	1.4626028139982234	0.03327702174270893	2.196177090710883	5.839045541141673	5.5353409909771125
+140000	-72144.85266053631	-71996.72598694879	-148.12667358751918	-71996.72598694879	6.046908448961816	0.3110188205538333	1.726075195787988	0.05520218601657785	0.4573550273087725	2.9576281861288285	-138.03554728463348	0.1482470556455275	0.8472434217547447	0.2063903628503299	6.758307207814933	16	5.020828287689562	3.8089158364533375	2.8604357627640957	2.5900071744359074	4.049132809153436	1.555270949408507	4.028085184165543	2.2717619554926407	0.4024738855149085	1.4666741296430261	0.033369651989237144	2.230487136681352	6.046908448961816	5.547523235817175
+145000	-72129.7488549446	-71986.17816071425	-143.57069423034613	-71986.17816071425	5.994849939683251	0.3156654420162574	1.7260010695294812	0.09174686706173348	0.8374384796678603	3.318854095580272	-134.3557525396901	0.3014902406490818	0.5749021962018606	0.40127275194349865	6.329692121466908	17	4.983955806470495	3.9418611296998374	1.836786742708782	2.202252072454619	4.002871770266008	1.827213802725964	3.934328089295742	2.219279548338411	0.38523683686931137	1.4553650682478056	0.033112349132756486	2.2753197561282748	5.994849939683251	5.4621973355393605
+150000	-72140.54941959988	-71992.40020673917	-148.14921286070415	-71992.40020673917	5.866276286105299	0.31736156130398496	1.7260010695294812	0.07136268058720617	0.48699262989014025	3.0767559954712307	-138.69984990160015	0.2601158975565261	0.615862665445805	0.43129099485327643	6.5182666177768915	17	5.074676322531622	3.9754060208286597	1.784773966919674	2.2106059232356703	4.129662509509081	2.2751511139249536	3.9790891693637853	2.296647782339965	0.4005011856961517	1.4818563685673967	0.033715077069753824	2.316736291606388	5.866276286105299	5.567699463191029
+155000	-72137.3068416679	-71991.08633707941	-146.22050458848952	-71991.08633707941	5.857507915350995	0.3249928936053949	1.7229141373387726	0.0859804347238576	0.5502865751962442	2.821222589589817	-136.88748888996537	0.48113032609892203	0.44448342651166606	0.3970006030242885	6.294979435243304	18	5.041605413699873	3.8073260167820986	1.5718789704770344	2.263384450723356	4.131328964950878	2.110359318702546	4.013006415864233	2.2945598662187674	0.3978911791937947	1.4721993315955901	0.0334953609402583	2.233184164030964	5.857507915350995	5.510277537660023
+160000	-72137.91742205906	-71996.18373255948	-141.73368949958217	-71996.18373255948	5.665832413446164	0.32538731064392157	1.7246791074855008	0.09082459619052186	0.5466743829312062	3.0859261692730624	-132.89638593772952	0.17957010358604283	0.7979183089278963	0.19975963879026723	5.953904987382539	18	5.009440935412045	3.8514365675726134	1.580940049944729	2.9560725147139153	4.097870300296014	1.927354598094979	3.9650961528237696	2.2789714045407314	0.38933714921169393	1.4806858088539676	0.03368844458917733	2.2691578704162176	5.665832413446164	5.529951605714653
+165000	-72128.70009377111	-71988.1497885234	-140.55030524770734	-71988.1497885234	5.730465686119886	0.3245819210782156	1.7386820641751148	0.05170247165582466	0.5843011468252084	3.165559438959328	-130.80851325886897	0.296132424933059	0.5857393651467405	0.38930980733939813	6.643705814048152	20	5.032392590994953	3.7904127595553527	1.5154657923249824	2.5489511303961816	4.1124580792708345	1.694169622432602	3.5518014799388595	2.2782005490238326	0.3905642245853118	1.4853524919480134	0.033794620588088735	2.264165063241708	5.730465686119886	5.547380375217924
+170000	-72140.83468096604	-71998.49847500697	-142.33620595907757	-71998.49847500697	5.854304263202582	0.31743139966060124	1.7338306499928346	0.12669233171072972	0.5653387230893099	2.8236069071134824	-133.6966295515799	0.22758254496801894	0.6811948883779236	0.31305881699128524	5.966683577992152	18	5.102503853091547	3.7075883508725958	1.3367264825097533	2.4167968068866577	4.143814810757563	1.9787762572764558	3.672539787129469	2.339382134553236	0.400347524208862	1.508363594173352	0.03431816733758733	2.288126115205339	5.854304263202582	5.620797280365615
+175000	-72138.0793271538	-71996.24308571075	-141.83624144305116	-71996.24308571075	5.670316460377981	0.31873059526319064	1.718884663907709	0.060996011931007746	0.47830799288706505	3.20274830369182	-133.75170908212596	0.36534057559244354	0.45165829973338634	0.4733974506281676	5.717639163523744	20	4.98703321203252	3.7797109390007084	1.6909285883381706	2.454338896098273	4.162934459145178	2.9602588001770664	4.076379241918941	2.242772692221082	0.4159026302965379	1.4742290366729658	0.033541540627145705	2.2251392928664764	5.670316460377981	5.466831364525104
+180000	-72144.34997984201	-71999.41126981007	-144.93871003193988	-71999.41126981007	5.6538039882444115	0.31784254811629	1.691186631699625	0.06414748164517427	1.1078462702269656	3.4134624072827355	-136.8360330686394	0.2609898864257306	0.7054353836876128	0.30059981372589006	5.734180143820604	16	5.002784321365328	3.9292373131206664	1.466017497448324	3.1484530068768386	4.097025768096943	2.6649578412789596	3.677929746905395	2.2498562941105935	0.429818255316664	1.4787667870629122	0.03364747865706182	2.2321672012024596	5.6538039882444115	5.503999122554489
+185000	-72146.10504790915	-71998.53727480271	-147.56777310642985	-71998.53727480271	5.680337307265203	0.31435447338198325	1.7064397549237333	0.0856502917281624	0.5400232192838467	3.1711441268749145	-138.60276704372836	0.2925895177905518	0.6940902389057317	0.24663752708374181	6.073129784387588	17	4.945841090023709	3.7472079137426775	1.7161914007101378	2.717311510764779	4.06993095863822	1.6551741429342561	3.259236914009239	2.2369474925983672	0.41128303319577636	1.4702821976306728	0.033454422494093604	2.219359892834431	5.680337307265203	5.483599258948615
+190000	-72148.5940024151	-71994.25803721364	-154.33596520145989	-71994.25803721364	5.978872141011395	0.3168063467260164	1.7134457750671632	0.11680800877015514	0.48483753693351583	3.0572524278297646	-144.79644219821952	0.46134837994076755	0.6691768909175723	0.13875818261829823	6.041842606805271	14	4.961142387755519	3.9387605377843737	1.5810013367518168	2.9528304450674696	4.191483390654016	1.6840260626442638	3.5057182126963515	2.290969812445652	0.4100861273084306	1.4748309134600404	0.03355792280267821	2.2262260832105834	5.978872141011395	5.5005642570906605
+195000	-72130.55890074394	-71986.91668526016	-143.64221548377674	-71986.91668526016	5.6969523595002025	0.3104726432091041	1.7051426187617813	0.09449138151215895	0.9261277602411838	3.0485798584371433	-134.25657499954207	0.30190691101374345	0.6737991627203405	0.3079368972463993	6.400353362637724	18	4.965201902837762	3.8006295014998512	1.4595943888684653	2.4332925548808464	4.122109837362969	1.555	3.347793930806881	2.292844426351018	0.4089739032412806	1.476037711787725	0.03358538198104859	2.2515089586179418	5.6969523595002025	5.469613363152352
+200000	-72142.3946070246	-72002.28597804338	-140.1086289812283	-72002.28597804338	5.61873021532367	0.30281516391076735	1.6741640912643219	0.06433375943581998	0.443368949379312	2.6702520981298252	-131.9704694860664	0.4018400743078113	0.6199002908026984	0.25805662649579814	5.666335118044284	18	4.998911214538308	3.849946399236421	1.351804090299961	2.0909762367391016	4.027484764519346	1.555	3.900003627036867	2.3945051313888435	0.4118793060909697	1.4865236722367627	0.03382397682473492	2.2002995389469837	5.61873021532367	5.495405419592468
+205000	-72135.58944351837	-71994.70667309525	-140.8827704231283	-71994.70667309525	5.467618816164705	0.30962873729592905	1.6843415806835829	0.08445389802527109	0.5030937046360783	2.681386702192336	-133.4026984545348	0.2949877317716435	0.5832983445152741	0.4021376697130109	5.511842222140292	19	4.930052783042247	3.6522843710041917	1.5011205050097425	2.6256533885153783	3.93005164460708	1.555	3.8340384200957143	2.3615215754742738	0.40620579804773294	1.4660472756657867	0.03335806217029241	2.227538634107344	5.467618816164705	5.408667779894279
+210000	-72134.03707900096	-71990.94608867646	-143.09099032450422	-71990.94608867646	5.599477717973484	0.3042590731941967	1.6677560402969414	0.06827881407746039	0.4511968452771642	2.662576326190797	-135.44611506695674	0.21444291078794286	0.6318256227981325	0.4198208230833719	5.645469663294993	18	5.0191383039475825	4.011830354676419	1.66704447902416	2.674866791436695	4.003713772263995	1.555	3.9490125820157975	2.4570032654582437	0.4340550234641157	1.4935258360860688	0.03398330225774705	2.2692900536978446	5.599477717973484	5.510044049848168
+215000	-72141.30151879122	-71993.03513848443	-148.26638030679572	-71993.03513848443	6.031250228995787	0.30323963162861267	1.6710554316250266	0.11476003388578775	0.532884982695106	2.6923266135859465	-139.0875919001706	0.4053871853297392	0.3470695772542744	0.5681859657070386	6.358647502225593	20	4.95398482935543	3.4438314525200844	1.8733214512255285	2.6592403428431926	4.04033893823333	3.8584909236432248	3.945683780470404	2.42431453162632	0.43697381016120196	1.473655504933777	0.03353117785976581	2.2390987146810755	6.031250228995787	5.424838927899051
+220000	-72152.57330419104	-72002.73412508391	-149.83917910713777	-72002.73412508391	5.838670070017605	0.29500482337510875	1.6596540950701302	0.10234805991741477	0.44219410932879083	2.8415679376341028	-141.15697832676807	0.308542468125854	0.72346264125315	0.195505804085553	5.90075259284114	13	5.0268442780206435	3.2538133879244358	1.8432268174692081	2.6987083476774734	3.907256135150974	2.3706068984470328	3.1954880330605304	2.505184163845712	0.44397775611611834	1.4955272559206036	0.03402884204925138	2.136782981096405	5.838670070017605	5.497081386787237
+225000	-72139.12488577282	-71983.40460503058	-155.72028074223766	-71983.40460503058	5.764704886974998	0.303014142974806	1.6758562375188393	0.06425158290849434	0.40551312143131574	3.0758199705827	-145.90206125491395	0.31852166819196226	0.7921374437232183	0.10998763892190888	6.233112167002025	11	4.933530216880146	3.549344589452897	1.516233889024311	2.649522455477212	3.944358786020321	2.215846469837371	3.5538720773713917	2.455136889188476	0.4371379329582742	1.4656503852239824	0.033349031427387855	2.1418540499738965	5.764704886974998	5.387263535489872
+230000	-72148.43382878067	-71989.4258274024	-159.00800137827562	-71989.4258274024	5.898204216733446	0.30354555502656105	1.6973258922457237	0.0785618918350086	0.48348409278014876	2.8308524105289936	-147.7744644145087	0.3258091902331838	0.7839122513481361	0.15819576012704525	7.42047327197255	9	4.966250058164789	3.6120836623608032	1.9035246403532236	2.7798912008648062	3.992645853912194	2.7083051148511834	3.668467952289098	2.5271511952686754	0.44053603379904577	1.4770436490677359	0.03360827081886648	2.1348860416460753	5.898204216733446	5.426235003361312
+235000	-72148.87878210375	-71997.69487235867	-151.18390974508438	-71997.69487235867	5.849877660411795	0.3000148651387829	1.6973097111840527	0.05505387313933443	0.4396886916812994	3.1039609409387587	-142.44150246695793	0.3360230791699731	0.6578185013638814	0.28667418760415925	5.996068911634325	15	4.920389494290504	3.717994369904573	2.141121358536908	2.7706498452859907	3.9057711242362556	2.684706872202609	2.98	2.477167925571941	0.42991344357317335	1.4576107238317781	0.03316609904246361	2.2767715075518455	5.849877660411795	5.365041095386109
+240000	-72151.026202861	-72001.80188249936	-149.2243203616425	-72001.80188249936	5.543314719927135	0.2984405836675783	1.6846115885226378	0.10119152039676045	0.8108691201513837	2.7766266010030853	-139.90316295133943	0.19190153702264567	0.7980225560919842	0.2589358500749945	6.4024663742791095	16	4.907409162392416	3.503708398716657	2.0838850108640212	2.8750857618384305	3.9468629444161447	2.4713907327958733	3.8822607430139606	2.452296315288596	0.4249342510936888	1.4537654447140376	0.033078604551664566	2.145100105521798	5.543314719927135	5.350887741440087
+245000	-72136.72071040313	-71991.74329952257	-144.97741088056074	-71991.74329952257	5.707187258920098	0.2868437840437908	1.669859690383681	0.06611211246190397	0.44061444889443313	3.0167844734669766	-136.79940478424467	0.10445206655037974	0.8651643682255221	0.22736255154152168	5.791273026369654	16	4.9164037663252005	3.2807967720577995	1.6613978430498977	2.6987898936551753	3.9330039520491478	1.7709263863839584	3.454343512985643	2.519914024860765	0.3937064975746755	1.4564299962021379	0.03313923307004275	2.149031778061598	5.707187258920098	5.360695180422733
+250000	-72138.62549451596	-71989.87537928022	-148.75011523574065	-71989.87537928022	5.914051732253263	0.2986778126846091	1.6815149555800935	0.0824315949073228	0.4547125360262139	2.839754271782832	-140.1036944603917	0.3396791125928284	0.7008676298493924	0.27244351101416925	5.951869653666567	19	4.911015601911672	3.3857896826288223	1.5763168776105003	2.553468152125115	4.027867373989484	2.015565448044742	3.7816198087598356	2.540951880900661	0.3958087459510758	1.4642067984995797	0.03331618442681693	2.160506819987737	5.914051732253263	5.396987687273414
+255000	-72141.01018196452	-71991.38041703541	-149.62976492910767	-71991.38041703541	6.056520105990257	0.2941681436869218	1.674625188945311	0.05151667390791364	0.3948501267495613	2.960910744227904	-140.18096466419155	0.1543045367770643	0.8893252458291522	0.0978236030847473	6.059286778098938	14	4.896285784549751	3.361923021443185	1.7778867439865913	2.402546603399013	4.040640321188757	2.310751297044515	3.5719438232061256	2.553580096705503	0.3908794176932161	1.4598151409545321	0.03321625778198768	2.0504004496896355	6.056520105990257	5.372212212010827
+260000	-72124.98558616237	-71975.62871823706	-149.35686792530282	-71975.62871823706	6.324900437091297	0.29186495158594394	1.658693574479604	0.08770320320060236	0.5998926752597524	2.389173418108099	-139.05572634327797	0.38509881662299067	0.5721360407062127	0.31280219798488756	7.0948163798842385	16	4.879200844978714	3.2102133932867534	1.7716830440961537	2.550352320719603	4.027695481928669	2.87694608123549	2.98	2.544669717785284	0.3868246627970442	1.4547213097188645	0.033100354057827616	2.043245849382211	6.324900437091297	5.344941481403053
+265000	-72123.74444353764	-71978.77853991646	-144.96590362118724	-71978.77853991646	6.53274874817205	0.29523173651625856	1.6718784496863552	0.08050459113729641	0.5191258054246608	2.7097424195371413	-134.91001741169478	0.41550451285690115	0.47651782674296567	0.47605328267952657	6.965845774329542	21	4.915532114959369	3.327228289168881	1.784875264920891	2.638458548101125	4.094350729427513	2.981394196380307	2.98	2.563617714694162	0.4014932784674786	1.4655533853659244	0.033346824317597265	2.0467005791343005	6.53274874817205	5.383062780729666
+270000	-72132.24159271916	-71983.93238733463	-148.30920538453057	-71983.93238733463	6.2884705262694505	0.29566382326991214	1.6670611582611845	0.07167273809025032	0.40791359392800486	2.709455444159759	-139.09178857049403	0.29268097163840967	0.623779044108571	0.27859320510499197	6.336720906546205	16	4.9489414466246595	3.4889834616638082	1.4370585086415988	2.493053344979655	4.107577198234739	2.9910253491433205	2.98	2.6060701317388175	0.38269135732869736	1.4702877370172247	0.03345454853586874	2.0533122797815087	6.2884705262694505	5.398582499894865
+275000	-72131.45705256631	-71977.79511416955	-153.66193839675861	-71977.79511416955	5.814254176593281	0.2970124563558158	1.6797624161557267	0.07093163548460422	0.4038869751067834	2.781815288494246	-144.88440271377564	0.19517390590757855	0.719894590322244	0.22255653841600842	6.0294061605154825	17	5.003836555471545	3.6372294377643692	1.4529987827592137	2.8798023063407827	4.153139648270972	2.951484699364842	3.5893990922620507	2.59880248359373	0.3921040719315228	1.4865965994740329	0.033825636192311395	2.174639269044952	5.814254176593281	5.412770037634636
+280000	-72129.92945517706	-71978.22070667072	-151.70874850634192	-71978.22070667072	5.649251301667098	0.2946580314087558	1.698223594522862	0.06557685573180293	0.40632578090202015	2.976682813738433	-142.94604507589412	0.2754947045785334	0.6768719576567509	0.20087336977423942	5.910203372252543	15	4.927837306537283	3.238489044277291	1.6587681383972936	2.799928830796895	4.080019715628701	3.2286479483533626	3.82757369531115	2.55933136284626	0.39286492146758883	1.4640178793708123	0.03331188580961189	2.1416104222154826	5.649251301667098	5.33848714186965
+285000	-72130.19611313185	-71981.6007359156	-148.59537721624133	-71981.6007359156	5.676038704518163	0.2966277411039735	1.6976912698700282	0.057808090832198754	0.4447033723394159	2.903781154799465	-139.81861161688298	0.2967690562739331	0.6175895202964505	0.2950189181178441	6.044661927947743	18	4.957267349792535	3.2578299572835516	1.3032889900448401	2.8250243944651543	4.104386420380487	3.0060804274230177	3.8977409625793533	2.5746162085154083	0.39521119041135544	1.4727612908992715	0.03351083114390497	1.9923270306844754	5.676038704518163	5.383820196158402
+290000	-72143.99158180603	-71989.68091595394	-154.3106658520896	-71989.68091595394	5.589122792295164	0.2933615921743314	1.6858175389906405	0.07132336047778517	0.42829751309704034	2.6967216937019627	-145.68421878426352	0.3374628707999528	0.6263108420936513	0.23932935383241505	5.892220679842473	14	4.925682397718094	3.2370728756482854	1.7738471969921472	2.784355338147426	4.1220509847915645	3.41560593980162	3.892729543600621	2.594400905570308	0.38690199669928027	1.463377674582493	0.03329731875472562	1.9550896856596909	5.589122792295164	5.301573271251422
+295000	-72128.39537281847	-71974.89033197626	-153.50504084221456	-71974.89033197626	5.470969452519188	0.29035417035959604	1.6957431601178987	0.13585353357058766	0.6845020573576106	2.9871684046186857	-142.6132739955456	0.2617508672470971	0.7576308889702518	0.2003571030247989	7.3467024046173455	16	4.916230475629007	3.230861236702279	1.9054401163752035	2.8710079335748087	4.125462227326577	4.006068511371437	3.8995317192539294	2.5894224937996526	0.3791252563384236	1.4605695902095601	0.0332334243260489	1.9846366017013004	5.470969452519188	5.297806113088462
+300000	-72135.54009379704	-71986.75903335931	-148.78106043772763	-71986.75903335931	5.6459175443767675	0.2886943689030339	1.7058886921453291	0.06265933823546607	0.36986276046402766	2.96872613816836	-140.7442819719021	0.043685981043528437	0.9459631911732854	0.21556685657097643	5.6841208286224445	17	4.90451268071654	3.5291967363735814	1.9008985155262688	2.742366694432512	4.089013365983457	4.0685278596033365	3.9923372141683235	2.493765889698282	0.3835141679876254	1.457088334601568	0.033154212732446404	2.0496619536248506	5.6459175443767675	5.2849398821603115
+305000	-72137.62901067657	-71988.20338039649	-149.42563028007663	-71988.20338039649	5.5973256904931326	0.2895188815372409	1.6730767855464175	0.06831400759527573	0.47484880161680454	2.6570600517624254	-141.35956311084823	0.06073220220964596	0.9354010134396363	0.18855584077251605	5.688935348507984	14	4.933899682206053	3.5273845520132525	1.4919275602680382	2.405702903899087	4.211236843180926	3.6899324321821902	4.144527709305166	2.5279603496011496	0.3848484103827264	1.4621839895895004	0.033269555945021685	2.0567927094154426	5.5973256904931326	5.3194699998250785
+310000	-72129.30328139507	-71981.87056060847	-147.43272078659373	-71981.87056060847	5.776054595769466	0.2895188815372409	1.6838711662975883	0.062016923396310555	0.4392220696673765	2.7336498211885965	-138.28507307616667	0.05859922241495536	0.9426635065745056	0.1986747050755719	6.264699791250619	17	4.943452839878753	3.2663923458491517	1.4957378637309364	2.6764988427373977	4.271591875429126	1.9235386248793893	4.236314029971512	2.496563555851909	0.38167495437144894	1.4659183295583431	0.03335452461749773	2.0620456483595704	5.776054595769466	5.333075786293687
+315000	-72064.27866086	-71918.95783194531	-145.3208289146791	-71918.95783194531	5.455389995698638	0.29127001153938314	1.6789723186802272	0.0642198792357988	0.39930611174666375	2.687025915056517	-137.36909103705443	0.11804706893583665	0.9122814474858995	0.13796331798184824	5.496361910038812	13	4.9350223384953695	3.2608218820291652	1.4931870514671601	2.602637551204485	4.231797087319756	2.209746977822042	3.552369572691802	2.492305948225611	0.4098747305312773	1.4634183711475794	0.03451168325848162	2.0585290620272687	5.455389995698638	5.340353177218109
+320000	-72050.69127158314	-71916.22635185177	-134.46491973136776	-71916.22635185177	5.630718212590397	0.2811737951782766	1.6942817875664398	0.05076988719794664	0.3518492814995257	2.8104995722610395	-125.96772501681264	0.3290983475772309	0.5656302518253847	0.38741582036135924	5.954448458358205	22	5.0462176538509915	3.189440757825136	1.1904661098462814	2.5649299018479925	4.329488436402467	1.555	2.98	2.5306381150695714	0.3898649381547876	1.4972014925969064	0.03530838802174607	2.1060503578375034	5.630718212590397	5.449905301808416
+325000	-72072.17781860293	-71931.20550244965	-140.97231615327635	-71931.20550244965	5.587291830663707	0.2936004232709262	1.69559083513826	0.049304716726156564	0.39926388764012505	2.834379733485898	-130.96829701822327	0.3422401479640265	0.614935245517193	0.3351887086992948	6.844887036785198	19	4.93025315744258	2.940908132997491	1.4441697995669849	2.3371405618878853	4.229994720381259	1.555	2.9884169250722223	2.39562566124018	0.3861686629530484	1.4627950858541403	0.03449698436918862	2.188387286816219	5.587291830663707	5.341334436626758
+330000	-72057.97414366939	-71915.90804668429	-142.06609698509507	-71915.90804668429	5.615073850842947	0.27975293594618267	1.67004041752006	0.07934745994340929	0.39132519958120027	2.3593037393800658	-133.44280968080935	0.37314389952211063	0.6321492854577551	0.2563772115425902	5.9209782672236715	18	5.024603089744076	2.867380091522061	1.2508562469837046	2.28270989955814	4.291676013607161	1.555	2.98	2.4414705928775207	0.3935587474057257	1.490788499764937	0.035157150903421315	2.255681274745735	5.615073850842947	5.43863632311207
+335000	-72064.95916170959	-71924.70283308763	-140.25632862194917	-71924.70283308763	5.581270878671567	0.2839301179150882	1.685201713490923	0.05740073087629032	0.3535251236796613	2.8023120794889933	-130.82750477716647	0.2402576670060278	0.5058570563322576	0.5390276554078576	6.6104865326198174	21	4.953447643866338	2.676830545041333	1.233142363440395	2.3884526073966112	4.283653413362131	1.555	2.98	2.3626143648103968	0.38798540207862947	1.4696768381041985	0.0346592762049342	2.2168068108653465	5.581270878671567	5.361617584392628
+340000	-72050.07109564668	-71913.90062414756	-136.1704714991216	-71913.90062414756	5.573016072708953	0.2790559136472012	1.674863649945918	0.07001789734911622	0.41194230240563673	2.5171344475491946	-128.37767625017693	0.34228398834381424	0.649330689063339	0.2989104828813943	5.57962865978622	19	4.920006374061984	2.607658831858292	1.4004938967339957	2.336698169805331	4.254733998069238	1.555	2.98	2.373207446540369	0.387932218789235	1.4597548881409024	0.03442528761958437	2.0297563822740132	5.573016072708953	5.324692160627037
+345000	-72056.15222701902	-71916.48056455061	-139.67166246840813	-71916.48056455061	5.918609012060728	0.28395327471489873	1.6844763973831338	0.059485095130597174	0.37030448337415384	2.8014047921599023	-131.21833509078883	0.18528257318496297	0.7657887033667596	0.3623039434234418	6.008847246409884	18	4.924940274158056	2.7232745965835616	1.4492923353121152	2.5557752624899654	4.259000747110969	1.555	2.98	2.3537590863881124	0.4000585299776771	1.4612187652652922	0.03445981012158539	2.031791870533196	5.918609012060728	5.319434107755346
+350000	-72060.27198707791	-71924.9550258188	-135.3169612591141	-71924.9550258188	5.530874810799341	0.29258305176037547	1.687744078752296	0.06176250709617141	0.38266580550333823	2.8933839739615506	-127.0004378860539	0.09306218964392142	0.8754745856211761	0.2855246556966551	5.9140930669935825	20	4.901614779734376	2.8639323581127263	1.442428199220356	2.2064627417536498	4.238829274433734	1.555	2.98	2.342611216284526	0.3925572312923866	1.4542981432346422	0.03429660162278394	2.0221689010537727	5.530874810799341	5.314290506710478
+355000	-72057.10161041604	-71914.1269179415	-142.97469247454805	-71914.1269179415	5.545803428653603	0.2894633786606722	1.6981534038386017	0.10767904046827412	0.5515251027024785	2.522895701500706	-134.57264146859117	0.26178154015929544	0.7990729337839491	0.1801871321979813	5.700327707173236	16	5.012029283293834	3.171065667448748	1.5994785610145263	2.6544189426786757	4.373850848622308	1.555	3.7533743774699913	2.4261181435504	0.3906515404757227	1.4870578795110603	0.03506917197197025	2.0677205784818633	5.545803428653603	5.437631284684842
+360000	-72055.80581595263	-71913.64493792316	-142.16087802946444	-71913.64493792316	5.753680971674483	0.28876743077421574	1.7141274500903696	0.10744987655861107	0.6905030749224434	2.970241489025884	-133.50829506173463	0.19800511891427247	0.7987720526028035	0.24521199327330553	5.942718817015864	19	5.168225442030773	3.081576418131458	1.5126214680261785	2.592684012914079	4.510158651874831	1.555	2.98	2.4376753165412266	0.3818440644026304	1.5334009304930922	0.036162076590537634	2.056116750862006	5.753680971674483	5.643524319567973
+365000	-72057.14965970714	-71918.3087353635	-138.84092434363208	-71918.3087353635	5.7842661308629415	0.28729566775081355	1.6963503945705036	0.12999352202503625	0.6433618696951997	3.0446662855442805	-130.2304370423093	0.2489547752535789	0.7322502418279787	0.2538206525686436	5.934061624870003	21	5.129703595383707	3.2227300698563788	1.2567654985085697	2.540549846090765	4.4765417669517165	1.555	3.5469230690245075	2.439182025824207	0.3833475330755079	1.5219715847427036	0.03589253920590047	2.026176111049225	5.7842661308629415	5.591278649864565
+370000	-72076.23765320641	-71926.62198390329	-149.6156693031196	-71926.62198390329	6.080074682066168	0.2834855778276484	1.709485158549021	0.07171555679015579	0.3559097959944809	2.9388914173848697	-140.56059452615804	0.24670957224415324	0.7136841319749339	0.2358562147927769	6.128886810328025	16	5.259709844583291	3.3135031182738266	1.3109721355040551	2.573699832203702	4.589994404844945	1.9709007648606784	4.1684997664644134	2.5010001992129816	0.39306302130759774	1.5628907068102948	0.03680219301135765	2.0775271397231547	6.080074682066168	5.744802046548751
+375000	-72074.91583095782	-71927.75685631785	-147.15897463997345	-71927.75685631785	5.993386145232058	0.2945713327750954	1.702184891091097	0.0714253279130403	0.720328209993511	2.9966577243105763	-138.38599545682317	0.37006955570573286	0.4844615817716784	0.37734750949168994	6.062023234569252	17	5.153149744338407	3.214932972384534	1.000021953834583	2.521557466897694	4.473988522373162	1.944266418055038	3.697220866403082	2.4503307060630752	0.3850996856501698	1.531227022821906	0.036056591924529535	2.006144868227586	5.993386145232058	5.622415547746497
+380000	-72074.11210235501	-71927.02298560568	-147.08911674933177	-71927.02298560568	6.376861363711127	0.2984054658087872	1.719631672995597	0.10667870224825494	0.5000955273617707	2.7580688054047156	-137.1995343163618	0.2624185469715348	0.720329233368821	0.24968520450838022	6.645725426465008	19	5.115974798458189	3.3119320007352324	1.0905950003413827	2.85370814786274	4.441713061841345	1.555	4.309068860284844	2.371090706598487	0.3860579209433022	1.5180487791980897	0.03579647880538486	1.9916724910205827	6.376861363711127	5.584109993134492
+385000	-72053.20283985703	-71915.01477450438	-138.18806535265134	-71915.01477450438	5.637476850464825	0.3068622439008061	1.7367906871079912	0.06266728561854884	0.5483967731677993	2.7892075821780997	-127.90208194874043	0.3495595673951481	0.5442193599281315	0.402825131167526	7.014891236365517	22	5.047628572281974	3.3242624984268403	1.4130877006600926	2.4602159564028865	4.382374551099278	1.555	2.98	2.384381837458365	0.38443450014374597	1.4996315987797906	0.03531826021887378	1.9252324768314761	5.637476850464825	5.519819698548012
+390000	-72058.66587162296	-71918.95630682568	-139.7095647972735	-71918.95630682568	5.83562029096888	0.28426151325636445	1.7142914384195462	0.06573072162773852	0.431914756907309	2.894894304795994	-130.4997579432983	0.3287796542434841	0.538165465419993	0.42448285422450627	6.3435600766647315	21	5.166379558027296	3.4166302278722123	1.0700194877150522	2.232654809315311	4.463760838051725	1.555	2.98	2.438182500101672	0.39145311519624093	1.5349120731767851	0.03614916093903215	1.988899715128311	5.83562029096888	5.653809204505966
+395000	-72067.06875630078	-71925.00498297274	-142.06377332804425	-71925.00498297274	5.886130750999915	0.2990415078051658	1.7244658414487226	0.05312819203697228	0.4017338054856376	3.1185621902429426	-133.56612660396678	0.32049185962215093	0.5540240013474991	0.4367492215012681	5.92973575103997	20	5.175163804492665	3.630770259592645	1.0718388110530435	2.1043891053894193	4.471753451443062	1.555	2.98	2.468127229199505	0.4039948191903601	1.5375218399974413	0.03621062431694277	1.9969853432532458	5.886130750999915	5.663422213570193
+400000	-72045.82740895753	-71911.18280394984	-134.64460500768854	-71911.18280394984	5.478818153234826	0.32218524261517806	1.7420730955281898	0.08046254891427287	0.5892265769399108	2.860896272134424	-126.77455711456776	0.2237715356149429	0.7781749777895849	0.21670526934757356	5.48655339620593	19	4.906975846189122	3.298467902812065	1.0162938518544056	1.989036556929261	4.2255402543793625	1.555	2.98	2.3264556309257642	0.3997054244054398	1.4578441991161897	0.03433411300805881	1.8934973296942836	5.478818153234826	5.382926177422099
+405000	-72052.90785727245	-71914.53141351907	-138.37644375338752	-71914.53141351907	5.544157538051948	0.3247520989302662	1.741703671338171	0.06000974223710766	0.5010327754722464	3.142958552773676	-130.00646425027782	0.10061663840167165	0.8865277150730991	0.29767240367661263	5.8658975759837695	17	4.88527360842384	3.0899366725766244	1.0117990567904622	2.3907089515770497	4.209678173132236	1.555	2.98	2.2867556431434655	0.4000913133047161	1.4513965453217395	0.03418226243709266	1.8416114023993853	5.544157538051948	5.3543532197068755
+410000	-72058.03956841068	-71920.82049102505	-137.21907738563058	-71920.82049102505	5.409567756598106	0.3167259193678371	1.7243601427356812	0.09858259312605111	0.5437123430246715	3.0303809255305363	-129.63103917923814	0.14667304340488077	0.8461640491893407	0.2170813568242617	5.426145866079492	16	4.8943285329326525	2.8369302299875088	0.8973776273487584	2.3502620579109013	4.217480871838482	1.555	2.98	2.349598382911811	0.3854246318247243	1.4540867295782731	0.034245619749439425	1.7704440471584189	5.409567756598106	5.382001237568916
+415000	-72062.60477482078	-71916.23155416614	-146.37322065464437	-71916.23155416614	5.414415387367738	0.3071985166413527	1.704719985855424	0.06962521196864893	0.4890008772316361	2.7664772560983644	-136.1927000466319	0.1889496275623516	0.8334190858349634	0.17379181737940166	6.745084948564793	16	4.907347653807445	2.722605235942378	1.0199328135013976	2.2202494595836115	4.228699549311425	2.651175113122844	2.98	2.35584841397297	0.4032732226235598	1.457954661771102	0.03433671454619247	1.7751535031945058	5.414415387367738	5.3958613663864625
+420000	-72049.92173531458	-71912.05323322522	-137.86850208936477	-71912.05323322522	5.420321839780403	0.3155770190412396	1.7262953565871337	0.06137600782610735	0.48567380825228923	3.011610075228959	-129.5784964924535	0.22439674192855458	0.7983826921594396	0.20684316679513226	5.674234184314735	16	4.895650899940801	2.721935833261802	0.9575196890446122	2.2925619455383996	4.198311844147691	1.555	4.0546323319930355	2.3863067068166743	0.4234576695831353	1.454479599878099	0.03425487235220721	1.7709223919981616	5.420321839780403	5.40877913245243
+425000	-72060.12782203281	-71922.41971297012	-137.70810906268724	-71922.41971297012	5.4863945693362215	0.315440069377042	1.7249609388250016	0.11677451683243571	0.5664735146040132	2.8111431387058285	-128.9742041099918	0.32676978274910806	0.627498537666618	0.29657994951961975	5.962222146861044	18	4.9267676419433455	2.7392364490128385	1.0543738229731174	2.083035098239657	4.246174920395061	1.555	3.8506753419302546	2.402260397210491	0.43356014492337475	1.4637242677235778	0.034472596215100834	1.7767455290978738	5.4863945693362215	5.427310735453964
+430000	-72055.8293762987	-71920.85382222515	-134.97555407355614	-71920.85382222515	5.493858195738409	0.3206071152470732	1.7306064554656213	0.11365280919133722	0.5127084463085636	2.7508987706076633	-126.82155510981092	0.3094318953062277	0.6097412232384061	0.3595940350593686	5.722677805030423	19	4.986799915769723	2.7426290261468695	0.8357088376388148	2.203966944189294	4.297914225769593	1.555	3.0162146008415482	2.4315317500422875	0.44552880822519114	1.4815596320907192	0.034892642071916356	1.7667339895742995	5.493858195738409	5.482370854500105
+435000	-72060.79103402469	-71923.49420157919	-137.29683244550296	-71923.49420157919	5.498323224203075	0.3179123887241501	1.7350177960555833	0.11917842448420925	0.5851674431988112	2.741869068432327	-128.70962560412474	0.44738082578618965	0.46326467777308544	0.40765543867986737	5.883771306252751	20	4.9952277612379605	2.747264153683463	0.8371212113171304	2.134993133543901	4.3051778332016815	1.555	3.110082163660887	2.4042929262207435	0.44083164940646347	1.484063513506084	0.03495161171183127	1.7697198244381624	5.498323224203075	5.491636230120086
+440000	-72048.58358023877	-71917.08206771305	-131.50151252571624	-71917.08206771305	5.478881389286603	0.31596699945338885	1.7309215486546758	0.0846418215452211	0.5182156278614783	2.7569019656082974	-123.7280051014234	0.2946113690463715	0.6480574177998387	0.35520284735937774	5.556185191351307	20	4.981241937137935	2.739572261532342	0.6610829342272638	2.1443886076528496	4.293124036503618	1.555	3.0715511975347716	2.3975612976427656	0.43899230196132	1.4799083773951298	0.034853752892017816	1.6672671560876269	5.478881389286603	5.474449066125009
+445000	-72046.06210790292	-71918.57197318513	-127.49013471778865	-71918.57197318513	5.3870398025267345	0.3243527234276367	1.7625329951230253	0.07142865639133245	0.6068089300705217	3.0784047192020583	-119.56157066732744	0.3708551678403637	0.6095481631042688	0.33935324953971624	5.539961369914662	23	4.897742198589823	2.5870804917677335	0.7274692763638337	2.1094003389406617	4.22115910504144	1.555	2.98	2.3955268636615146	0.4198640742090686	1.4551009168969042	0.03426950517013823	1.7907039179935453	5.3870398025267345	5.382681777668622
+450000	-72056.39149865549	-71921.13475072678	-135.25674792870637	-71921.13475072678	5.501435478063261	0.31953876009254584	1.7615047050112282	0.11116753346260021	0.6846266024735986	2.729928601446405	-126.93677799004017	0.2619936192258111	0.705173213213152	0.32245930688321645	5.75497852875436	18	5.019164919454694	2.6017934550163924	0.6652746330604656	2.1750248884585854	4.325808268463153	1.555	2.98	2.4431774427506276	0.4579546056907022	1.4911751538204934	0.0351191000225682	1.9400855349522754	5.501435478063261	5.49483902135971
+455000	-72062.31361625786	-71924.88646903289	-137.42714722496325	-71924.88646903289	5.649421798136869	0.32580693016183127	1.7814453317747845	0.05387421893061591	0.639349187877625	3.2231405919529625	-128.61447631478123	0.3909692316236966	0.642816121978793	0.24932419143742468	5.82717926667564	16	5.156805461479701	2.5440991929632686	0.6835184569952008	2.2346705883647457	4.427875030357984	1.555	3.0814177375711544	2.402818596057639	0.4382432821297773	1.5320676448463457	0.03241138756400797	1.9259075861040347	5.649421798136869	5.6455239726169575
+460000	-72054.67003683733	-71913.66363003991	-141.0064067974182	-71913.66363003991	5.7253137725789935	0.31714264120081614	1.7867671587712732	0.05250212459392299	0.5144905848397714	3.330858492970758	-131.19115654570462	0.41836917608985585	0.4295632152863112	0.4284293048976849	6.534057720616719	20	5.188934793427793	3.4226995256415402	0.6877770995911822	2.263139019126572	4.410927453067443	1.555	2.98	2.3886313467391864	0.4503770500599189	1.5416131493831942	0.03261332580614663	1.9298016906600597	5.7253137725789935	5.6806982515561275
+465000	-72058.3905235979	-71918.71657800802	-139.67394558987155	-71918.71657800802	5.485702599417833	0.34398004257648496	1.8015215764611452	0.09548164332289338	1.0892907887166516	3.6462915124249853	-130.0582878545999	0.23664045771075792	0.7719283144253146	0.18578778216221417	6.1942546991880585	16	4.950638452855072	2.552264536122532	0.6561916639503478	2.1540836078769603	4.208360276480632	1.811045426251486	2.98	2.2982768649776215	0.4300205748033587	1.4708161965014392	0.03111559332291056	1.7916876282148364	5.485702599417833	5.4195774368441585
+470000	-72056.15519906924	-71915.15417868232	-141.0010203869178	-71915.15417868232	5.588528393431085	0.3339893098269496	1.7949684635044092	0.053366928236931795	0.5550570105800616	3.5795426107928314	-131.80188616566394	0.30296279954765787	0.6479416061199659	0.32829924086301016	6.145027898280621	19	5.0769965216712825	2.9820120589848433	0.7247124444477486	2.2388365163198642	4.321943600496134	1.9082648359025263	2.98	2.299687084479494	0.43250500534483927	1.5105134138590224	0.03195540082182705	1.921735023177572	5.588528393431085	5.567472747985879
+475000	-72050.0315668017	-71913.03002601405	-137.00154078764422	-71913.03002601405	5.7240199316008535	0.33580650542869167	1.8032464353397981	0.11733530696893586	1.123816267888288	2.9831817698817797	-128.2238654079981	0.2473777353803861	0.7385559115967956	0.2260683161489734	5.814779367168641	19	4.932646022290649	2.8049205527464927	0.6581523955500108	2.2525460739882375	4.241969990503183	1.8540085485804405	2.98	2.233649509946018	0.4202079093669995	1.467566099500825	0.031527379920581126	1.867095747950806	5.7240199316008535	5.418872506910283
+480000	-72075.1344560252	-71934.64460144412	-140.4898545810935	-71934.64460144412	5.420200631319692	0.3318668860251064	1.792358986508254	0.09010472741663754	0.6736277259954175	3.1070189019850716	-132.1508891620075	0.5265515732612196	0.5807888584849235	0.23834694863140224	5.520392186336549	16	4.91957406759105	3.117616318834908	0.6564082326278825	2.2525674659168824	4.226682151741068	1.849095259516073	2.98	2.22773013825852	0.42480888121432714	1.4636769176125133	0.03144382953398203	1.8621477766334367	5.420200631319692	5.38062298017296
+485000	-72064.16340398195	-71927.54916143575	-136.6142425462014	-71927.54916143575	5.377733656235996	0.3321943027573076	1.7726316094329146	0.1995415582886476	1.5139487582397517	3.3456255068983043	-128.55860465851168	0.4047053957230375	0.6109475288684332	0.34693588608243825	5.571050243025287	18	4.927108863100343	3.1134680659159963	0.6555348258040392	2.039643369519367	4.171268962400326	1.8734664273197177	3.3314123061063654	2.241945407013445	0.4115161363931073	1.4617293713384099	0.031401990852019133	1.8596700310868808	5.377733656235996	5.373463604964338
+490000	-72054.31268935946	-71920.83004099014	-133.48264836931637	-71920.83004099014	5.379249082155958	0.33193425396241943	1.7767052468438906	0.06305047311398754	0.5457366083914641	3.358754394516309	-125.37778417285168	0.3017936494150476	0.5740289804116924	0.39508150794770236	5.656481329260857	20	4.923301803232108	3.2311414864576826	0.6897944533172137	2.0579221739302205	4.168045922052001	2.1214253333642197	2.98	2.2399542561387933	0.4111981676590031	1.4603370073677504	0.03113387006646668	1.858233108270636	5.379249082155958	5.368271406230464
+495000	-72053.76577302326	-71915.83132703212	-137.93444599114196	-71915.83132703212	5.553646053059602	0.33057816937145246	1.7905076841468468	0.07127435702442775	0.6380959990536927	3.1190233950507853	-129.70020272116474	0.3203426247458935	0.6507230717023511	0.2968960291812846	5.626988377289516	19	5.063382687962347	3.4023656459188825	0.7561467312592833	2.061987297258192	4.282069049815234	1.8146800300705301	2.98	2.3009459155328553	0.40078359745372855	1.5001004878539335	0.03198161344939908	1.7548144189441044	5.553646053059602	5.538409201421446
+500000	-72062.80581143296	-71924.92328266148	-137.8825287714882	-71924.92328266148	5.515251845709349	0.33101131052997673	1.7966718737770286	0.10707256022585569	1.0126082735070399	3.5278504770502415	-129.76560438835622	0.33089425358925734	0.6533135552215042	0.2511412038943866	5.518770417589245	19	5.0335316743048955	3.143986021921778	0.7168229432531426	2.0324053299035985	4.21866557479007	2.2305087619064676	2.98	2.2840788574416373	0.41287286787337996	1.4912566925277497	0.03179306685146269	1.677845334860494	5.515251845709349	5.484550779528951
+505000	-72051.4313713064	-71913.44478764402	-137.98658366238516	-71913.44478764402	5.505047970411215	0.35001987536987617	1.805731503568024	0.1620048388508879	1.6548532611265245	3.70284226546972	-128.34889851064344	0.38483342285358263	0.6967585796072497	0.1853277594161243	6.113244552918704	19	4.750723413057728	2.777470214964004	0.7269174790422414	2.076840544704486	4.023142706138075	1.7508743325290235	3.7615499413244255	2.169567481295213	0.3857812958307068	1.416493137192278	0.030199134214148174	1.837147314592983	5.505047970411215	5.218362000149842
+510000	-72057.0539722695	-71916.66483314782	-140.38913912167246	-71916.66483314782	5.177252463406253	0.3541353151240654	1.8069310085493784	0.08526498391739108	0.6629172860629797	3.321581136821897	-132.13921229267703	0.2135589613264329	0.8434367779718164	0.13230486892597454	5.407085270769822	12	4.6812852713811015	2.7542507919518124	0.7162926132042904	2.001022689398519	3.9580470753012773	1.9800727151780708	3.9314597879029085	2.1518667112093466	0.3930137725552245	1.396025776199049	0.029757733699373984	1.8193675311073612	5.177252463406253	5.158883429272484
+515000	-72055.31779779328	-71919.04925451505	-136.26854327823517	-71919.04925451505	5.25844736819953	0.35174620350110913	1.7751549229541812	0.08741399263197026	1.6114175782078901	3.5983825710364066	-128.72721556997533	0.21905150289765493	0.8167989685978568	0.17699212718181662	5.265314578770597	16	4.64988632224554	2.528102340476143	0.8626401987415708	1.9434103172558173	3.954556183007232	1.7673674292089552	3.9050901695710496	2.1306642121809296	0.37985318432081155	1.3866621634735472	0.029558138606862013	1.8734154385480435	5.25844736819953	5.17053486258185
+520000	-72054.77534847081	-71918.81282490678	-135.96252356402297	-71918.81282490678	5.221872197443824	0.35776831559739786	1.7751549229541812	0.10476533919782424	0.6182423362300802	3.256400212039912	-127.85284800234778	0.23322558404537538	0.8042489053764271	0.15129079781390017	5.42550709463399	13	4.650728788152892	2.4573423538121024	0.8627964918006665	1.961487964642082	3.83832513929005	1.8885286564941917	3.681419123373045	2.1445880281914933	0.3838438786199488	1.3869133987762585	0.029563493947258598	1.9026858076400777	5.221872197443824	5.215670957198756
+525000	-72054.16551848903	-71915.17417711484	-138.99134137418542	-71915.17417711484	5.238844265993058	0.3641250121476762	1.7841999219066245	0.06434456045645293	0.6392995956957948	3.8292922142573502	-128.24647329822454	0.2691468541052574	0.7441314364995794	0.1990865358929787	6.9997399061785766	16	4.668357946625226	2.465329179475559	0.8656007429675274	1.845657315127114	4.013016955760567	1.838277727222378	3.9463972517584853	2.1587504733445604	0.37911000202712486	1.3914211286451366	0.029659580872954203	1.9088698950198355	5.238844265993058	5.164331673583007
+530000	-72059.47538911711	-71918.19034688856	-141.2850422285619	-71918.19034688856	5.733773020603663	0.3594251217131845	1.7835898656588256	0.40233223401741874	1.3333871040644354	3.2294613474197416	-130.1817539266103	0.23727157888860326	0.7562989409174428	0.24506540484358502	7.440233944206165	16	4.718932036118939	2.8607273508275353	0.8749781236099676	1.8374543295022876	4.0512138573265775	2.056243555001496	3.9565178684448594	2.2338485331366895	0.38698476017963757	1.4064949206482575	0.029980894344321413	1.8935861868399058	5.733773020603663	5.5759693202295955
+535000	-72057.71852786143	-71916.49587706802	-141.22265079341713	-71916.49587706802	5.537699106264992	0.365012153661601	1.7859167925107535	0.08387963035100302	0.7467575299736516	3.1142232479055005	-132.51799442159012	0.6000915232246044	0.48492784393709104	0.2715143861550305	5.693688843644783	14	4.6930045514522725	2.696163848171438	0.8901969102941105	1.7241790523856297	3.964318905411643	1.757335538187584	3.1959799225486907	2.221574977775592	0.38485852878681515	1.3986574601242623	0.029816168687656804	1.8419057759218915	5.537699106264992	5.381560468039301
+540000	-72039.92602656137	-71911.14987015344	-128.7761564079218	-71911.14987015344	5.259906075467572	0.36749869802226326	1.7675502946731818	0.06573601707516546	0.9051183273125133	3.119185490548875	-120.79383753488338	0.2219200332346571	0.6929949934462994	0.4141089815079899	5.654800061555586	19	4.639976451512552	2.6976831441250932	0.6878412041413878	1.5613536202258784	3.8992825736191317	1.9444531776921323	3.5742168573263253	2.2077512085702216	0.3792459941994225	1.3785012855949303	0.02938648528267856	1.8153619112913282	5.259906075467572	5.205010826610799
+545000	-72050.48661072487	-71913.89351895703	-136.59309176783793	-71913.89351895703	5.344374587568831	0.36538340263767766	1.781269172087814	0.07180787602873837	0.656277746053941	3.5062903162354635	-127.7391942334197	0.12731779944671845	0.8690216309275015	0.20981021643086367	5.918312675659584	17	4.721686754584377	2.7451895290392585	0.6372953938638343	1.6203904006188323	3.921110654035497	1.7513383031286427	3.82378312842211	2.2466298585471325	0.38592454212927435	1.4027767876385122	0.029903983300988698	1.872826785766893	5.344374587568831	5.2926804757727774
+550000	-72050.67227998616	-71920.65010950677	-130.02217047939598	-71920.65010950677	5.3576047342285005	0.3562958762225034	1.7654034245194778	0.05701899803994669	0.6093595510155912	3.6265331369956906	-121.83154442885227	0.35943622126577296	0.6946557778180998	0.23547090459716613	5.557961444320811	18	4.6262024191656606	2.617504735618186	0.6244076843838662	1.5873809504010041	3.872793107571445	1.555	3.7492130490265922	2.2011973743259086	0.379964995319769	1.3744091266160148	0.02929924984019844	1.8392803573383172	5.3576047342285005	5.31819339137258
+555000	-72056.84366490884	-71922.91263737348	-133.931027535358	-71922.91263737348	5.402359177554498	0.3578697329784111	1.7730097627312429	0.0634513153995387	0.6920387123338378	3.310430149520735	-125.58772267730255	0.4277780455758641	0.7089711387693898	0.18177734554432579	5.503394513226195	15	4.6198231299021915	2.609130793552204	0.6368103835329644	1.5672716992731648	3.9027203967090456	1.555	3.4860138477888616	2.1981620391839267	0.3880613729855154	1.372513888883072	0.02925884771919333	1.8367440866841265	5.402359177554498	5.349456750318113
+560000	-72045.65833881331	-71912.48594561662	-133.17239319670196	-71912.48594561662	5.554900418529069	0.3576584564070016	1.7948330837193318	0.15791311300349786	1.2910639427015929	3.30600076797886	-125.07786496840488	0.29870929489634385	0.6628391232361459	0.3607526139503771	5.611844515020464	17	4.651543056884431	2.9587539394475555	0.6505151139784542	1.6387394000740636	3.9376126780816914	1.8351488041045751	3.438361734946306	2.1972753059075822	0.39738635864709115	1.3819376350121584	0.02945974036965654	1.7297532480416897	5.554900418529069	5.474246627780429
+565000	-72054.37604558484	-71915.45061770061	-138.9254278842238	-71915.45061770061	5.716107646170638	0.3532489927672783	1.8221676776418294	0.053448633065319905	0.657543868380658	4.000818740034739	-129.6932525189404	0.18263788232969339	0.8352370673370635	0.23685566201025512	6.072498690688482	16	4.836730315180175	3.1849112868521354	0.6764134253483378	1.6065164094795152	4.070932147553005	2.092833878557653	3.8413090498476223	2.281033131887026	0.42947525801395703	1.4369553438958462	0.03063259171864852	1.8791507749974632	5.716107646170638	5.432281251576142
+570000	-72058.17541653084	-71913.88345557445	-144.29196095637815	-71913.88345557445	5.579165874085282	0.34284980017413563	1.8162327126420736	0.058233001630081896	0.6420723453549387	3.473251318100653	-134.93896374979798	0.10397243152005495	0.7916906385478673	0.3885647384631799	6.361404840694104	18	4.899644190877957	3.0974102388761495	0.6852118878197961	1.6274132069245222	4.157741823765115	1.8329198568288911	4.059114027573273	2.3119512160668636	0.43506166685572384	1.4556465720599203	0.030946785486085142	1.9059404761534837	5.579165874085282	5.429530165362465
+575000	-72051.9561855873	-71911.37216441752	-140.5840211697778	-71911.37216441752	5.499190563128004	0.3443417079470948	1.8126372362082583	0.07094776653800863	0.7165463543810635	3.0935998450845736	-128.72585048576136	0.14835876099350223	0.815287092614434	0.30646471926022395	8.291924390475396	20	4.937468982597504	3.121321954215318	0.6849213464915226	1.7427084747466892	4.1761179487270566	1.7197188610076615	3.86426429608056	2.329799261722157	0.42187157333052083	1.4668840265077243	0.031185691755560793	1.916795997113164	5.499190563128004	5.49255341443451
+580000	-72063.98883805583	-71924.85332870064	-139.13550935517975	-71924.85332870064	5.654358750409774	0.3378933062159514	1.8022995768210996	0.06428675936428496	0.592804401643944	3.6632490594913825	-129.9742735410817	0.3062461363440616	0.712064607672872	0.31858559703452544	6.100193068526	18	4.750848210906403	3.0024941442023625	0.6590334774880983	2.2916116217761617	4.003156434996506	2.3025404468916095	3.228334256469912	2.25202759927026	0.4059261569953559	1.4114404318293425	0.030006970859965044	1.730743531350653	5.654358750409774	5.29177597275585
+585000	-72057.49210923734	-71921.51233361449	-135.97977562285098	-71921.51233361449	5.2334055360497	0.3399266445277041	1.804178681364973	0.1626980180266959	1.2444992357678206	3.1578385926542487	-128.6966765695272	0.1655484301928421	0.771673757920363	0.3120555466299692	5.300316625546954	17	4.649246833502901	2.8609038203216834	0.7369482829149283	2.1473177604240345	3.980007972594249	2.2043457586175417	3.9312104766432254	2.176011695793582	0.412485248725395	1.3812554447216416	0.02936524343872682	1.8369922939109005	5.2334055360497	5.178631605612963
+590000	-72050.52566399933	-71914.75861294674	-135.76705105259575	-71914.75861294674	5.54696568661875	0.345754138340291	1.828017677175714	0.08478731366788302	0.6624911726216015	3.399631572647623	-126.91751123920108	0.2886217979657829	0.6079079060322963	0.3537076546156705	5.927354997225191	19	4.635912863832454	2.9359384232458354	0.7348347263744868	2.6598853961006386	3.9685933698649873	2.3948588943751457	3.9199358243950435	2.1697709271286083	0.4197736614545714	1.3772940249763317	0.029281024364240234	1.8122258334429384	5.54696568661875	5.342457149356448
+595000	-72044.87354847288	-71914.19161545242	-130.68193302046157	-71914.19161545242	5.420296116290429	0.34434032327647096	1.8282510941529015	0.09526655370993885	1.2182019150371401	3.4230728632673646	-122.29977032357553	0.24229237308946427	0.7803339454418562	0.20642411624400123	5.569633804974272	18	4.670985634653511	2.95815012102527	0.740394082364664	2.6364122438691147	3.969145487181511	2.0719063937842614	3.91222768434735	2.201156725141177	0.42648675814143777	1.3877138752000207	0.029502548514304575	1.8157674934501133	5.420296116290429	5.410999911586032
+600000	-72047.8568761061	-71917.30204492301	-130.55483118309127	-71917.30204492301	5.198998944644552	0.3576679290510981	1.8150490987030226	0.0648667042523897	0.6818576745141873	3.6249236939346323	-121.82156767714191	0.146168147072618	0.8941086040514027	0.15528272291330714	5.686880206944894	17	4.489791846662154	3.012125214597044	0.7117293920933169	2.4953863205375177	3.729985729192963	2.9519343839880423	2.98	2.083853004832866	0.4099751312684747	1.3339879076844299	0.028360344064645823	1.800561210944086	5.198998944644552	5.15
+605000	-72043.06438285805	-71913.93295923708	-129.1314236209684	-71913.93295923708	5.161593667079025	0.36999140669396324	1.8187564027626029	0.06249915329428898	0.7492708369006295	3.622722065931286	-121.59469065602487	0.157856720669751	0.9109161612669999	0.14051066202298307	5.17454366393224	16	4.44620014238586	3.0802419487571875	0.628614050246694	2.461169680339377	3.7409144996921007	1.9116434975645018	3.054903255339541	2.0800289236200875	0.40863000905916025	1.323527850748358	0.028137965127075306	1.8121110442243213	5.161593667079025	5.15
+610000	-72043.47370212636	-71915.3750662577	-128.09863586866012	-71915.3750662577	5.161869249787341	0.37180210624007204	1.8097616784102462	0.09282592879983888	0.808442233673307	3.2729877789726953	-120.95892281188304	0.10967474246633135	0.8767759271356558	0.2940704824322735	5.249864436148905	20	4.382280719482802	3.0359598018764347	0.5848879480129563	2.3497123125408366	3.6871343979664752	2.9476440859240496	2.98	2.050126030326552	0.4027554659609008	1.304500561443616	0.027733448363323886	1.867195692282442	5.161869249787341	5.15
+615000	-72043.36742808939	-71916.86780312503	-126.49962496435826	-71916.86780312503	5.15246365324135	0.38181649121703026	1.8096538811928906	0.07812161770851321	1.5470174004642292	3.4529114901208766	-119.04079641233838	0.40644074912897926	0.5707993797848587	0.33085153665385236	5.280439470175479	20	4.374295634544737	2.9165121054996788	0.5838222061668509	2.3366409462620155	3.6428493477459076	1.5902411288288465	2.98	2.0463904342901973	0.3947213804245381	1.302123591903858	0.02768291441650893	1.8637934190933747	5.15246365324135	5.15
+620000	-72049.61575482941	-71922.90555478133	-126.71020004807394	-71922.90555478133	5.166213880775633	0.37779771982458804	1.813146967524708	0.08769103034657671	0.9396904484699781	3.129404872183914	-117.5133660453456	0.2327853370485654	0.767403997906649	0.24614710376515772	6.053362479154161	19	4.369784364308849	2.953051253692382	0.619569571101282	2.276489098507384	3.6469992977358014	1.6743733829320349	2.98	2.0442799641646046	0.4000334672469406	1.3007806942365827	0.02765436465255069	1.8618712637385795	5.166213880775633	5.15
+625000	-72049.93620045469	-71923.16508817738	-126.7711122773058	-71923.16508817738	5.179918283976853	0.36828864197075256	1.8246490671435205	0.13002713189710577	0.9278766917239547	3.3274796774103765	-118.44940659810081	0.20595431841787204	0.8621755012823952	0.14802517133431656	5.45418211012525	18	4.381376080837218	2.9755061229562125	0.6212131018202047	2.4223395680870254	3.6774359504896057	1.618509611683384	3.1766504809490357	2.047148861045205	0.40576290900757833	1.3042312720720293	0.02772772331950066	2.023878036342611	5.179918283976853	5.15
+630000	-72053.50347126473	-71922.59716543411	-130.9063058306173	-71922.59716543411	5.152752843334564	0.3628759730429718	1.800622317649685	0.0671408106025009	0.7679111111731048	3.297337270663835	-123.80799534069803	0.19225271973038943	0.8149830783919126	0.26970940111037034	5.198609807048553	17	4.358398495993128	2.95990144918868	0.6179552265568224	2.6139276171454617	3.6520248505809763	1.8680475065605044	3.2714445879239014	2.012606793054606	0.40514732573783324	1.2973913925096652	0.027582308704696457	1.8210427453159281	5.152752843334564	5.15
+635000	-72043.85117936652	-71915.84046690977	-128.0107124567626	-71915.84046690977	5.218872300844814	0.349856442815868	1.8063265631644532	0.055767746648184735	0.7013116092640505	3.280729733139592	-120.4212935480169	0.32998724188149603	0.7005748611023486	0.21640310403189084	5.263857255929289	20	4.384683994454635	2.969336619543484	0.5948982546963761	2.6322393728330065	3.6336756136767923	1.9773056370381263	3.5970090422777616	2.025339779088669	0.4258999030223052	1.3055994868769045	0.02775681132127119	1.902316403080215	5.218872300844814	5.15
+640000	-72045.12207750234	-71916.96378834486	-128.15828915748278	-71916.96378834486	5.351956457263652	0.36710890397077683	1.8178509704310797	0.07667423544040036	1.2993853091957461	3.632698126389349	-118.90594666781942	0.3133223818632024	0.7234794925980644	0.25523985450099823	6.045728420738387	17	4.230702169437391	2.8672774754546824	0.5740065509673103	2.5806047843902475	3.5054321890056253	1.6392806054893596	3.0332951794454597	1.9452534392970173	0.41320572322040205	1.25974929744817	0.026782044503567984	1.736079921367432	5.351956457263652	5.280296538399873
+645000	-72056.06288394953	-71923.83922997894	-132.22365397059355	-71923.83922997894	5.168018044946465	0.36086057299256297	1.8042106265509554	0.07190980819914643	0.7017629722213604	3.2767986910240783	-123.84859239003039	0.17340826298704823	0.7509516529902167	0.3843354002788402	5.799038262165263	17	4.192123211678357	2.839727204554067	0.5687722958492948	2.4825687386949586	3.4651828034167607	1.8045265914807367	3.225840031680726	1.9160846539611616	0.40186171644002	1.2482618863786055	0.026537824201068854	1.6903020686436006	5.168018044946465	5.15
+650000	-72048.75863648938	-71918.24502284698	-130.5136136423951	-71918.24502284698	5.1984975562963145	0.37159492108440834	1.8239955737433473	0.08482062026401774	0.7620534334605844	3.3216448349157397	-122.29683330140868	0.24988832514935655	0.731896273217623	0.34004472635350597	5.63631845008159	14	4.156090200503254	2.802820319797866	0.5638834656652647	1.8245325873052012	3.4728088194648232	2.1437551552238236	2.98	1.9032648837334747	0.40184484660917846	1.2375325656429859	0.026309720763332066	1.7005280265115403	5.1984975562963145	5.15
+655000	-72039.24145084662	-71914.12767048732	-125.1137803592983	-71914.12767048732	5.3194766918980285	0.373929446335612	1.8293906777588937	0.07964254862314366	0.8239254113141009	3.193706723799706	-117.03886060188289	0.4699624842244153	0.4954014877879502	0.3947524682772121	5.5004326673029595	19	4.130155566437817	2.78533029531853	0.5603647471986132	2.28083090994615	3.4823016200428696	2.593511305951624	2.98	1.8913882217969147	0.4010001727481531	1.229810174480704	0.026145544109928767	1.6899164733551009	5.3194766918980285	5.15
+660000	-72045.68066560825	-71917.83425365304	-127.84641195520265	-71917.83425365304	5.3314721918825585	0.3680661709440612	1.8281201608125046	0.08360479870626038	1.3453625624573065	3.622276707709054	-118.36864009709296	0.3942613465738844	0.6199889050215125	0.31399978462829564	6.180199158643291	19	4.068979024347603	2.921795066780677	0.5520645325961797	2.5702836116910213	3.4307211969322897	2.490692193500383	3.053729146495762	1.854863769499949	0.39348300818835397	1.2115940243401453	0.025758272019572086	1.6648851532030793	5.3314721918825585	5.15
+665000	-72042.52399107703	-71915.64036481892	-126.88362625812029	-71915.64036481892	5.391499558991925	0.3839127634886677	1.8125135444340865	0.13130429599890808	1.0015401443006555	3.0938680230367432	-118.49575591322564	0.23365545151229888	0.8037388397697411	0.18084707759764557	5.5511956240217115	15	3.9434827460386286	3.113021081710161	0.5350376460448756	2.5705839011971734	3.3133363071804585	1.6705905942044044	2.9907142567592766	1.7668732444808761	0.381347125253107	1.1742257951194361	0.024963830157182603	1.7182311954146774	5.391499558991925	5.15
+670000	-72042.58906515453	-71915.9423503845	-126.64671477003041	-71915.9423503845	5.86891568337578	0.3925303461798668	1.8017260648381406	0.07774447253882548	0.8083589157526234	3.4367011338867117	-117.59604817127753	0.12466064920975271	0.8379623305283084	0.3872178968952927	6.189416007244587	16	3.9850149670471677	3.472791626239952	0.5406725893664224	1.7986704288714803	3.378544491945753	1.6344689372000152	3.2457226024009285	1.785481711871173	0.3852856037975994	1.186669999991716	0.025226745802584955	1.6671407230400495	5.86891568337578	5.15
+675000	-72045.86678092639	-71923.5677085619	-122.29907236449495	-71923.5677085619	5.16822365412685	0.4088471296236028	1.8331278060529843	0.10840866922851727	1.1533639477410131	3.3178965030247354	-113.50529195481245	0.5588020036367077	0.5329813300017922	0.3014918787540271	5.715643162144654	19	3.9494911334232077	3.402091664275344	0.6059960662476975	2.782226544687644	3.344822135407006	1.6936910721821654	2.98	1.7521306028326376	0.39022799657183826	1.1760916036758082	0.025001865663319384	1.6981148836569797	5.16822365412685	5.15
+680000	-72053.5557080401	-71918.57633216913	-134.97937587097837	-71918.57633216913	5.321871523770609	0.3949785914811309	1.8334682167127025	0.07468892232941293	1.01197644322791	3.172692883161552	-126.38405898774182	0.1492414066302504	0.873279638210173	0.1615182058211401	5.6111705679919055	12	4.1131281672174955	3.4020444619050743	0.7700575720708045	2.3936416760793815	3.483406260378335	3.3727917869330164	2.98	1.7615247345468692	0.3940697191330668	1.2248199423387864	0.026037753831758634	1.6550685314868225	5.321871523770609	5.302866469355818
+685000	-72040.3167371642	-71913.59408203755	-126.72265512665057	-71913.59408203755	5.15690303806732	0.39587049642125227	1.8177928987462109	0.08938331482265174	1.0085821334357743	3.375993418451262	-117.99508105188845	0.13533391374239626	0.9142800464703281	0.1444270156596425	5.656485111271008	19	4.06827143987133	3.4206347253234157	0.7616595204791864	2.4319474748133656	3.4296196769100957	3.1692788887388987	2.98	1.7214681818704534	0.3895147652409282	1.211462368256964	0.025753792725550777	1.637018775963073	5.15690303806732	5.15
+690000	-72043.29145360262	-71911.6037133707	-131.68774023192447	-71911.6037133707	5.2137488630218245	0.3887764938829878	1.8180659899652423	0.09855418153803401	0.9950411874568219	3.0282964010260276	-123.44532702049857	0.4220465742963384	0.6573107376363906	0.19882159985182135	5.43652378474043	15	4.203317090860393	3.474846807630549	0.7370432433504684	2.096108431251927	3.55417532165971	2.7117672076893156	2.98	1.85662863060922	0.40911510674230633	1.2516766771073067	0.026608685953660796	1.7411211379708522	5.2137488630218245	5.15
+695000	-72042.08651223867	-71916.11093449926	-125.97557773941234	-71916.11093449926	5.221839813663616	0.38884912667372523	1.8041917196449626	0.10200517076345589	0.9767824127894601	3.248864752545863	-118.21595912848444	0.548404262072483	0.4768362215292619	0.38258662291085044	5.368958117103427	18	4.1217604483921955	3.4023344807715414	0.7227424492437763	2.086686862766359	3.4852139276672904	1.9106096594658708	2.98	1.7972112144103074	0.39866498530162525	1.2273904895478218	0.026092399639789807	1.707338296687697	5.221839813663616	5.15
+700000	-72044.87150870508	-71921.25514783461	-123.6163608704667	-71921.25514783461	5.157696315487034	0.3919334381183658	1.8198222875814691	0.0982814279861729	0.8576274057248011	3.4796439032292215	-115.39839772794382	0.31129078411717115	0.7782293122434008	0.16356959473762034	5.408384198835874	17	4.0852251347478115	3.451721843933192	0.716336055083356	2.220947786581445	3.4432932055204866	3.2979886994881236	2.98	1.8072832344586776	0.39424854935169534	1.2165108916038758	0.02586111642561219	1.6922044380009593	5.157696315487034	5.15
+705000	-72045.2951364683	-71919.8807316436	-125.41440482470307	-71919.8807316436	5.404978606348758	0.3783616223498797	1.8199642232363205	0.06581237879332445	0.7634150766590807	3.41913449131602	-117.46743366140353	0.4163492106956971	0.5201618789161724	0.43872898563412455	5.493686248593762	20	4.293933945394859	3.427705468893498	0.5669194933199198	3.1226976712611547	3.6444715622230057	1.555	2.98	1.9024274666482377	0.4189310511751562	1.2786608424514438	0.025572774429962437	1.7786569501581966	5.404978606348758	5.15
+710000	-72044.35800038243	-71922.21557259899	-122.1424277834446	-71922.21557259899	5.21857583493892	0.36928798062769097	1.7972441162181225	0.06879570960135291	0.7253711983393439	3.6739348222555392	-114.95255957307776	0.31241307608778346	0.6428074734423366	0.31446601001384983	5.222992291032262	20	4.144912967502298	3.308746950341995	0.47711589895082956	2.8481785142589158	3.5585035474086615	1.555	2.98	1.836403721277485	0.3984028361820632	1.2342849178195814	0.02468527129147893	1.7130332830288506	5.21857583493892	5.15
+715000	-72038.43172239674	-71917.32848046116	-121.103241935574	-71917.32848046116	5.2578423151342095	0.3728174762380714	1.8135520821798308	0.0893774766577285	1.3429435105489476	4.029513893745845	-113.63116218985137	0.21093699499154475	0.7572137671548469	0.28209111659365066	5.3200653368519335	20	4.1661542190258	3.3022021257512058	0.46216596648671143	3.021142366819604	3.5733942396449576	1.555	2.98	1.8463518007971778	0.4001524884898366	1.2397054852924654	0.02479368076541002	1.6830109773472555	5.2578423151342095	5.15
+720000	-72042.06917446434	-71918.96178183844	-123.10739262589541	-71918.96178183844	5.166097066458904	0.3693267935492861	1.8182180600626365	0.06555135992606265	0.7618259283683557	3.546577728275767	-115.20409619219951	0.37692555378789383	0.7391858185416602	0.13961324989475013	5.223421828132641	15	4.101644054445384	3.251069692478049	0.414308437887014	1.9013615963882078	3.5180625744229923	1.555	2.98	1.7956758890009619	0.38670164707133337	1.220509459249492	0.02440976688641182	1.633745214907492	5.166097066458904	5.15
+
