@@ -1,4 +1,4 @@
-**Data repository for **
+**Data repository for**
 ### Astrid Schuster, Sergio Vargas, Ingrid Knapp, Shirley A. Pomponi, Robert J. Toonen, Dirk Erpenbeck, Gert Wörheide (2018): Divergence times in demosponges (Porifera): first insights from new mitogenomes and the inclusion of fossils in a birth-death clock model.
 BMC Evolutionary Biology 18:114 https://doi.org/10.1186/s12862-018-1230-1
 Preprint at bioRxiv 159806; doi: https://doi.org/10.1101/159806
